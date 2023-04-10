@@ -8,3 +8,4 @@ By providing information on the technology stack used in each project, I hope to
 - [Portfolio Projects](#Portfolio-projects)
 
 ## Portfolio Projects
+ 
