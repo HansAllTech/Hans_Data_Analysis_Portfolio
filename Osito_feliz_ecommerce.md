@@ -63,6 +63,7 @@ order by YEAR, MES ASC;
 <!-- Texto invisible -->
 <span style="color: negro;">texto</span>
 </div>  
+<span style="color:black">Este texto faeffo</span>
 
 <span style="color:black">Este texto es negro</span>
   
