@@ -14,6 +14,7 @@ Al proporcionar información sobre tecnología utilizada en cada proyecto, esper
 Lenguaje y herramientas utilizadas en el proyecto: ```SQL, MySQL, Looker Studio```
 
 - [x] [`Ir al Proyecto`](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)
+- [ ] **negrita**
 
 
 <a name="Proyecto2"></a>
