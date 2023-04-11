@@ -1,12 +1,4 @@
 ## Tabla de Contenido
-- [Problema de negocio](#Problema-de-negocio)
-- [Objetivo](#Objetivo)
-- [Diagrama](#Diagrama)
-- [Análisis Previo](#Análisis-Previo)   
-- [Visualización en Looker](#Visualización-en-Looker)   
-  
-
-## Tabla de Contenido
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
 - [Diagrama](#Diagrama2)
