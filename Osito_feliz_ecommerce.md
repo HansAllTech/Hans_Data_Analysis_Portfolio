@@ -16,7 +16,7 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 ## Diagrama
 <p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>  
 
-## Análisis Previo
+## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
 Puntos detectados:  
 
