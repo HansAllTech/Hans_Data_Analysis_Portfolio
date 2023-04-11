@@ -23,8 +23,16 @@ Puntos detectados:
 
 ## Análisis de Ventas
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
-SELECT * FROM tabla
-WHERE columna = 'valor';  
+```sql
+SELECT 
+MONTH (created_at) as MES, 
+year(created_at) as YEAR,
+FORMAT(SUM(price_usd*items_purchased),2,'es_ESP') as 'Ventas brutas',
+FORMAT(SUM(items_purchased*(price_usd - cogs_usd)),2,'es_ESP') as margen_bruto
+FROM orders
+group by MONTH (created_at), YEAR
+order by YEAR, MES ASC;  
+```
 2. ¿Cuales son las ventas brutas medias de cada mes y año, devuelve los TOP 10? ¿Que puedes observar?
 3. ¿Cuál es el producto que mas vende en términos monetarios (Ventas brutas)?
 4. ¿Cuál es el producto que deja más margen?
