@@ -55,21 +55,9 @@ order by YEAR, MES ASC;
 12. ¿Cúales son los meses que han atraido más tráfico?
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
 14. ¿Qué campañas son las que han dado más margen por productos?      
-| [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)  | 
-| :--------  |   
-
-
-<a name="texto-invisible"></a>
-<div style="background-color: black;">
-<!-- Texto invisible -->
-<span style="color: negro;">texto</span>
-</div>  
-<span style="color:black">Este texto faeffo</span>
-
-<span style="color:black">Este texto es negro</span>
   
-  
-### Visualización en Looker 
+<a name="Visualización-en-Looker2"></a><p align="right">.</p>    
+## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 
 
