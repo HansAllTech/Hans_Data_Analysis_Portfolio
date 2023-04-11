@@ -1,4 +1,4 @@
-# Introducción [EN](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Projects.md) | [ES](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Proyectos.md)
+([EN](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Projects.md) | [ES](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Proyectos.md))
 
 ## Table of contents
 - [Introducción](#Introduction)
@@ -10,3 +10,5 @@ Los softwares utilizados en cada proyecto dependerán de los requisitos específ
 Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.  
 
 ## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/SQL_Projects/blob/main/Happy_Bear_Ecommerce)   
+
+## 2. Análisis de Rotación de Personal 
