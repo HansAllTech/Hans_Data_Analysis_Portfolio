@@ -60,7 +60,7 @@ order by YEAR, MES ASC;
 
 <a name="texto-invisible"></a>
 <!--Texto invisible-->
-<span style="color: transparent">Este texto es invisible</span>
+<span style="color: black">Este texto es invisible</span>
 ### Visualización en Looker  [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 | [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)  | 
 | :--------  | 
