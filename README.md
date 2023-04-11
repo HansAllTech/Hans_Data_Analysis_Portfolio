@@ -26,3 +26,6 @@
 </script>
   </script>
 </head>
+
+<a id="scrollTopBtn" href="#top" style="display:none;position:fixed;bottom:20px;right:30px;z-index:99;">Regresar al inicio</a>
+
