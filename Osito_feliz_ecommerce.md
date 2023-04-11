@@ -40,8 +40,9 @@ order by YEAR, MES ASC;
 4. ¿Cuál es el producto que deja más margen?
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
-7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?
+7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
 
+<span style="color: #000000; background-color: #000000;">Texto invisible</span>
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
