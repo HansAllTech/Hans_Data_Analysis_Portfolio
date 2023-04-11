@@ -1,6 +1,4 @@
-([EN](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Projects.md) | [ES](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Proyectos.md))
-
-## Table of contents
+## Tabla de Contenido
 - [Introducción](#Introduction)
 - [Proyectos](#Proyectos)
 
