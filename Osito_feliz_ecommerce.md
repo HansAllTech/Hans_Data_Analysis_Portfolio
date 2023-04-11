@@ -1,5 +1,5 @@
-## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <a name="Tabla-de-contenido2"></a>
+## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
 - [Diagrama](#Diagrama2)
@@ -10,20 +10,20 @@
 
 
 <a name="Problema"></a>    
-## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
 Para solucionar este problema, se ha decidido llevar a cabo un análisis de datos para medir la conversión de la web y entender mejor las ventas e impacto de los productos. De esta manera, se busca identificar las áreas de mejora y las oportunidades de crecimiento para la empresa.</p>    
 
 <a name="Objetivo2"></a>
-## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="justify">El objetivo principal del análisis de datos es proporcionar información detallada sobre el rendimiento de la empresa y ofrecer recomendaciones para mejorar su posicionamiento en el mercado. Al trabajar en estrecha colaboración con el CEO, el director de marketing y el Gerente de la web, el equipo de análisis de datos buscará proporcionar información valiosa y detallada para impulsar la toma de decisiones estratégicas y ayudar a la empresa a alcanzar sus objetivos de crecimiento y rentabilidad.</p>  
 
 <a name="Diagrama2"></a>
-## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
 
 <a name="Análisis-Previo2"></a>
-## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
 Puntos detectados:  
 
@@ -31,7 +31,7 @@ Puntos detectados:
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
 <a name="Análisis-de-Ventas2"></a> 
-## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
 ```sql
 SELECT 
@@ -51,7 +51,7 @@ order by YEAR, MES ASC;
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
 
 <a name="Análisis-de-Tráfico-Web2"></a>
-## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
 9. Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
