@@ -61,10 +61,11 @@ order by YEAR, MES ASC;
 14. ¿Qué campañas son las que han dado más margen por productos?      
   
 <a name="Visualización-en-Looker2"></a>
-## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231074999-d4801a7e-90de-4178-8e1f-63d837e8d0d3.png)](#Tabla-de-contenido)
+## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231075575-f48eefeb-a650-48ad-8d17-8b0e417a1ade.jpg)](#Tabla-de-contenido)
 
 ![Home_button2](https://user-images.githubusercontent.com/116538899/231074437-88e9ea21-fd63-4680-83d0-d8a4d1c5802b.png)
 ![Home_button3](https://user-images.githubusercontent.com/116538899/231074999-d4801a7e-90de-4178-8e1f-63d837e8d0d3.png)
 
+![botonhome4](https://user-images.githubusercontent.com/116538899/231075575-f48eefeb-a650-48ad-8d17-8b0e417a1ade.jpg)
 
 
