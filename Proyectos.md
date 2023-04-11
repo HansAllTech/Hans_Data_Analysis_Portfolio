@@ -9,7 +9,7 @@ En esta sección, encontrará una lista de proyectos de análisis de datos en lo
 Los softwares utilizados en cada proyecto dependerán de los requisitos específicos del proyecto y los datos analizados. Puede incluir herramientas como Python para la limpieza y manipulación de datos, SQL para consultas y análisis de datos, Tableau o Power BI para visualización de datos.  
 Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.  
 
-## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/SQL_Projects/blob/main/Happy_Bear_Ecommerce)   
+## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/SQL_Projects/blob/main/Osito_feliz_Ecommerce)   
 La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.  
 Lenguaje y herramientas utilizadas en el proyecto: SQL, MySQL, Looker Studio
 
