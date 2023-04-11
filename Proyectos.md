@@ -1,7 +1,7 @@
 ## Tabla de Contenido
 - [Proyectos](#Proyectos)
   + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
-
+  + [Análisis de Rotación de Personal](#Proyecto2)
 <a name="Proyectos"></a>
 # Proyectos [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.  
@@ -13,5 +13,6 @@ Al proporcionar información sobre tecnología utilizada en cada proyecto, esper
 <p align="justify">La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.</p>       
 **Lenguaje y herramientas utilizadas en el proyecto: SQL, MySQL, Looker Studio**
 
+<a name="Proyecto2"></a>
 ## 2. Análisis de Rotación de Personal [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 **Lenguaje y herramientas utilizadas en el proyecto: Python, Visual Studio Code, Google Collab**
