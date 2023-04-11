@@ -42,5 +42,5 @@ Puntos detectados:
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
 14. ¿Qué campañas son las que han dado más margen por productos?
 
-<a href="#Indice">Volver al índice</a>## Visualización en Looker   
+<a href="#Indice">Volver al índice</a> ## Visualización en Looker   
 <p align="right"><a href="#Indice">Volver al índice</a></p>   
