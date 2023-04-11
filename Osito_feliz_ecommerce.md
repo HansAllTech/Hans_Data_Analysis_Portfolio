@@ -4,17 +4,15 @@
 - [Diagrama](#Diagrama)
 - [Análisis Previo](#Análisis-Previo)   
 - [Visualización en Looker](#Visualización-en-Looker)   
-- [Texto invisible](#texto-invisible)
-- [Texto invisible](#texto2)  
+  
 
 ## Tabla de Contenido
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
-- [Diagrama](#Diagrama)
-- [Análisis Previo](#Análisis-Previo)   
-- [Visualización en Looker](#Visualización-en-Looker)   
-- [Texto invisible](#texto-invisible)
-- [Texto invisible](#texto2)
+- [Diagrama](#Diagrama2)
+- [Análisis Previo](#Análisis-Previo2)   
+- [Visualización en Looker](#Visualización-en-Looker2)   
+
 
 <a name="Problema"></a><p align="right">.</p>    
 ## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
@@ -23,11 +21,13 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 
 <a name="Objetivo2"></a><p align="right">.</p>    
 ## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
-<p align="justify">El objetivo principal del análisis de datos es proporcionar información detallada sobre el rendimiento de la empresa y ofrecer recomendaciones para mejorar su posicionamiento en el mercado. Al trabajar en estrecha colaboración con el CEO, el director de marketing y el Gerente de la web, el equipo de análisis de datos buscará proporcionar información valiosa y detallada para impulsar la toma de decisiones estratégicas y ayudar a la empresa a alcanzar sus objetivos de crecimiento y rentabilidad.</p>
-  
-## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
-<p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>  
+<p align="justify">El objetivo principal del análisis de datos es proporcionar información detallada sobre el rendimiento de la empresa y ofrecer recomendaciones para mejorar su posicionamiento en el mercado. Al trabajar en estrecha colaboración con el CEO, el director de marketing y el Gerente de la web, el equipo de análisis de datos buscará proporcionar información valiosa y detallada para impulsar la toma de decisiones estratégicas y ayudar a la empresa a alcanzar sus objetivos de crecimiento y rentabilidad.</p>  
 
+<a name="Diagrama2"></a><p align="right">.</p> 
+## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+<p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
+
+<a name="Análisis-Previo2"></a><p align="right">.</p>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
 Puntos detectados:  
