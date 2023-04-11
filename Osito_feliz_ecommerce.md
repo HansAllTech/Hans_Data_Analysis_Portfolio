@@ -20,7 +20,7 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 
 <a name="Diagrama2"></a>
 ## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
 
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
@@ -30,7 +30,8 @@ Puntos detectados:
 - Rango de tiempo de la tabla de pedidos.
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
-#Analizando periodo de ventas
+<!--Análisis personal by HR Tec -->
+- [x] Analizando periodo de ventas
 ```sql
 SELECT 
 MIN(created_at) Primera_venta,
@@ -38,8 +39,34 @@ MAX(created_at) Ultima_venta,
 DATEDIFF(MAX(created_at),MIN(created_at)) Periodo_ventas
 FROM ositofeliz.orders;
 ```
-<p align="center"> < img src="https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png"></p>
-![image](https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png"></p>
+
+- [x]  Analizando las ventas, tipo de producto vendidos, cantidad de ventas y ventas netas 
+```sql
+SELECT 
+MIN(price_usd) Precio_minimo,
+MAX(price_usd) Precio_maximo,
+ROUND(AVG(price_usd),2) Precio_promedio,
+COUNT(DISTINCT(primary_product_id)) Tipos_de_producto,
+FORMAT(COUNT(order_id),0,'en_US') Cantidad_ventas,
+FORMAT(SUM(price_usd-cogs_usd),2,'en_US') Total_neto
+FROM ositofeliz.orders;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231308111-5d6e6bd1-6e04-4db4-ab1e-c4e328c8f7da.png"></p>
+
+- [x] Analizando Porcentaje de venta neta por producto
+```sql
+SELECT 
+product_name Producto,
+CONCAT(FORMAT((COUNT(o.order_id) / (SELECT COUNT(order_id) FROM ositofeliz.orders))*100,2),'%') Porcentaje,
+FORMAT(SUM(o.price_usd-o.cogs_usd),2,'en_US') Total_neto
+FROM ositofeliz.orders o
+LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
+LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
+GROUP BY product_name;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231311124-cae904dd-909e-483c-a71d-92544096cc9f.png"></p>
+
 
 <a name="Análisis-de-Ventas2"></a> 
 ## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
