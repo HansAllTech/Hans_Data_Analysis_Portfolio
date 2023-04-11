@@ -3,6 +3,8 @@
 - [Objetivo](#Objetivo)
 - [Diagrama](#Diagrama)
 - [Análisis Previo](#Análisis-Previo)   
+- [Visualización en Looker](#Visualización-en-Looker)   
+
 
 ## Problema de negocio 
 <p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
