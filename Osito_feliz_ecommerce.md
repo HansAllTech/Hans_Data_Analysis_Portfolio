@@ -38,7 +38,8 @@ MAX(created_at) Ultima_venta,
 DATEDIFF(MAX(created_at),MIN(created_at)) Periodo_ventas
 FROM ositofeliz.orders;
 ```
-<p align="center">![image](https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png) </p>
+<p align="center"> < img src="https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png"></p>
+![image](https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png)
 
 <a name="Análisis-de-Ventas2"></a> 
 ## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
