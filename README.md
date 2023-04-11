@@ -1,9 +1,13 @@
+[Regresar al inicio](#top)
+
+
 # Hans - Data Analysis Portfolio
 ([Spanish](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Projects.md) | [English](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Proyectos.md))
 
 <head>
   <script type="text/javascript">
-    window.onscroll = function() {
+    <script>
+  window.onscroll = function() {
     scrollFunction();
   };
 
@@ -19,5 +23,6 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+</script>
   </script>
 </head>
