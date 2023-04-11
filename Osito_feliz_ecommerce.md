@@ -1,10 +1,12 @@
+<a id="inicio"></a>  
 ## Tabla de Contenido
 - [Problema de negocio](#Problema-de-negocio)
 - [Objetivo](#Objetivo)
 - [Diagrama](#Diagrama)
 - [Análisis Previo](#Análisis-Previo)   
 
-## Problema de negocio <p align="right">[Inicio](Tabla-de-contenido)</p>  
+## Problema de negocio 
+<p align="right">[Inicio](#Tabla-de-contenido)</p>  
 <p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
 Para solucionar este problema, se ha decidido llevar a cabo un análisis de datos para medir la conversión de la web y entender mejor las ventas e impacto de los productos. De esta manera, se busca identificar las áreas de mejora y las oportunidades de crecimiento para la empresa.</p>
   
@@ -39,4 +41,5 @@ Puntos detectados:
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
 14. ¿Qué campañas son las que han dado más margen por productos?
 
-## Visualización en Looker
+## Visualización en Looker  
+<p align="right"><a href="#Indice">Volver al índice</a></p>  
