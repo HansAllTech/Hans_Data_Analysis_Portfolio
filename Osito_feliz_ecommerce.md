@@ -42,4 +42,4 @@ Puntos detectados:
 14. ¿Qué campañas son las que han dado más margen por productos?<p align="right"><a href="#Indice">Volver al índice</a></p>  
 - [x] fdf  
 <a href="#Indice">Volver al índice</a>
-### Visualización en Looker   <p align="right"><a href="#Indice">[x]Volver al índice</a></p>   
+### Visualización en Looker   <p align="right"><a href="#Indice">- [x] Volver al índice</a></p>   
