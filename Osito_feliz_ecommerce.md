@@ -62,7 +62,10 @@ order by YEAR, MES ASC;
 <div style="background-color: black;">
 <!-- Texto invisible -->
 <span style="color: negro;">texto</span>
-</div>
+</div>  
+
+<span style="color: black">Texto negro en Markdown</span>  
+
 ### Visualización en Looker  [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 | [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)  | 
 | :--------  | 
