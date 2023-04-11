@@ -5,17 +5,27 @@
 - [Análisis Previo](#Análisis-Previo)   
 - [Visualización en Looker](#Visualización-en-Looker)   
 - [Texto invisible](#texto-invisible)
+- [Texto invisible](#texto2)  
+
+## Tabla de Contenido
+- [Problema de negocio](#Problema)
+- [Objetivo](#Objetivo)
+- [Diagrama](#Diagrama)
+- [Análisis Previo](#Análisis-Previo)   
+- [Visualización en Looker](#Visualización-en-Looker)   
+- [Texto invisible](#texto-invisible)
 - [Texto invisible](#texto2)
 
-## Problema de negocio 
+<a name="Problema"></a><p align="right">.</p>    
+## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
 Para solucionar este problema, se ha decidido llevar a cabo un análisis de datos para medir la conversión de la web y entender mejor las ventas e impacto de los productos. De esta manera, se busca identificar las áreas de mejora y las oportunidades de crecimiento para la empresa.</p>  
 <a name="texto2"></a><p align="right">.</p>  
 
-## Objetivo
+## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">El objetivo principal del análisis de datos es proporcionar información detallada sobre el rendimiento de la empresa y ofrecer recomendaciones para mejorar su posicionamiento en el mercado. Al trabajar en estrecha colaboración con el CEO, el director de marketing y el Gerente de la web, el equipo de análisis de datos buscará proporcionar información valiosa y detallada para impulsar la toma de decisiones estratégicas y ayudar a la empresa a alcanzar sus objetivos de crecimiento y rentabilidad.</p>
   
-## Diagrama
+## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>  
 
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
@@ -25,7 +35,7 @@ Puntos detectados:
 - Rango de tiempo de la tabla de pedidos.
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.
 
-## Análisis de Ventas
+## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
 ```sql
 SELECT 
@@ -44,8 +54,6 @@ order by YEAR, MES ASC;
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
 
-<span style="color:transparent">Texto invisible</span>  
-<span style="color:transparent">Texto invisible2</span>  
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
