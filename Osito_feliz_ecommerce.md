@@ -3,6 +3,8 @@
 - [Objetivo](#Objetivo2)
 - [Diagrama](#Diagrama2)
 - [Análisis Previo](#Análisis-Previo2)   
+- [Análisis de Ventas](#Análisis-de-Ventas2)
+- [Análisis de Tráfico Web](#Análisis-de-Tráfico-Web2)
 - [Visualización en Looker](#Visualización-en-Looker2)   
 
 
@@ -25,8 +27,9 @@ Antes de comenzar a responder a las preguntas de negocio que se nos solicita deb
 Puntos detectados:  
 
 - Rango de tiempo de la tabla de pedidos.
-- Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.
+- Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
+<a name="Análisis-de-Ventas2"></a><p align="right">.</p>    
 ## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
 ```sql
@@ -46,6 +49,7 @@ order by YEAR, MES ASC;
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
 
+<a name="Análisis-de-Tráfico-Web2"></a><p align="right">.</p> 
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
