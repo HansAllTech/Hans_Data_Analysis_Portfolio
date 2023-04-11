@@ -32,7 +32,8 @@ Puntos detectados:
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?
 
-## Análisis de Tráfico Web
+## Análisis de Tráfico Web <div align="right">Indice</div>
+
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
 9. Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
 10. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
