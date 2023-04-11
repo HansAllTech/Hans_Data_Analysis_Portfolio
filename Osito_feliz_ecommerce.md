@@ -43,4 +43,4 @@ Puntos detectados:
 - [x] fdf  
 <a href="#Indice">Volver al índice</a>
 ### Visualización en Looker   <p align="right"><a href="#Indice">- [x] Volver al índice</a></p>   
-<p align="right"><a href="https://linkedin.com/in/priyankajhatheanalyst"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" height="20" width="20"></a></p>  
+<p align="right"><a href="https://linkedin.com/in/priyankajhatheanalyst" target="blank"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" height="20" width="20"></a></p>  
