@@ -64,7 +64,8 @@ order by YEAR, MES ASC;
 <span style="color: negro;">texto</span>
 </div>  
 
-<span style="color: black">Texto negro en Markdown</span>    
+<span style="color:black">Este texto es negro</span>
+  
   
 ### Visualización en Looker 
 
