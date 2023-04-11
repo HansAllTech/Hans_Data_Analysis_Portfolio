@@ -22,7 +22,9 @@ Puntos detectados:
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.
 
 ## Análisis de Ventas
-1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.
+1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
+SELECT * FROM tabla
+WHERE columna = 'valor';  
 2. ¿Cuales son las ventas brutas medias de cada mes y año, devuelve los TOP 10? ¿Que puedes observar?
 3. ¿Cuál es el producto que mas vende en términos monetarios (Ventas brutas)?
 4. ¿Cuál es el producto que deja más margen?
