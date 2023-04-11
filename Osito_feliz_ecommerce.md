@@ -34,7 +34,7 @@ Puntos detectados:
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?
 
-## Análisis de Tráfico Web <div align="right">Indice</div>
+## Análisis de Tráfico Web 
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
 9. Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
@@ -43,15 +43,19 @@ Puntos detectados:
 12. ¿Cúales son los meses que han atraido más tráfico?
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
 14. ¿Qué campañas son las que han dado más margen por productos?<p align="right"><a href="#Indice">Volver al índice</a></p>  
-- [x] fdf  
-<a href="#Indice">Volver al índice</a>
+[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+
 ### Visualización en Looker   <p align="right"><a href="#Indice">- [x] Volver al índice</a></p>   
 
 
-<p align="right">[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)</p>  
+[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)  
 
 ![Home_button](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)
 
 
+| Columna 1 | Columna 2 |
+| :-------- | --------- |
+| Izquierda | Derecha   |
+| Izquierda | Derecha   |
 
 
