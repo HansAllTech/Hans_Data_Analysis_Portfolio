@@ -1,8 +1,8 @@
 # Introducción [EN](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Projects.md) | [ES](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Proyectos.md)
 
 ## Table of contents
-- [Introductión](#Introduction)
-- [Portfolio Projects](#Portfolio-projects)
+- [Introducción](#Introduction)
+- [Proyectos](#Proyectos)
 
 ## Proyectos
 En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.
