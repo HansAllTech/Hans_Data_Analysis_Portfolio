@@ -1,15 +1,17 @@
 ## Tabla de Contenido
-- [Introducción](#Introduction)
 - [Proyectos](#Proyectos)
+  + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
 
-## Proyectos
+<a name="Proyectos"></a>
+# Proyectos
 En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.  
 Los softwares utilizados en cada proyecto dependerán de los requisitos específicos del proyecto y los datos analizados. Puede incluir herramientas como Python para la limpieza y manipulación de datos, SQL para consultas y análisis de datos, Tableau o Power BI para visualización de datos.  
 Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.  
 
+<a name="Proyecto1"></a>
 ## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)  
 La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.  
-Lenguaje y herramientas utilizadas en el proyecto: SQL, MySQL, Looker Studio
+**Lenguaje y herramientas utilizadas en el proyecto: SQL, MySQL, Looker Studio**
 
 ## 2. Análisis de Rotación de Personal 
 Herramientas
