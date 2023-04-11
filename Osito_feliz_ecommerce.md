@@ -30,6 +30,16 @@ Puntos detectados:
 - Rango de tiempo de la tabla de pedidos.
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
+#Analizando periodo de ventas
+```sql
+SELECT 
+MIN(created_at) Primera_venta,
+MAX(created_at) Ultima_venta,
+DATEDIFF(MAX(created_at),MIN(created_at)) Periodo_ventas
+FROM ositofeliz.orders;
+```
+<p align="center">![image](https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png) </p>
+
 <a name="Análisis-de-Ventas2"></a> 
 ## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
