@@ -45,8 +45,8 @@ Puntos detectados:
 ### Visualización en Looker 
 
 
-
-
+| :--------  | 
+| :--------  | 
 
 
 
