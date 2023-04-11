@@ -40,7 +40,7 @@ Puntos detectados:
 11. ¿Cúales son las sources o fuentes que han dado más ventas?
 12. ¿Cúales son los meses que han atraido más tráfico?
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
-14. ¿Qué campañas son las que han dado más margen por productos?
+14. ¿Qué campañas son las que han dado más margen por productos?<p align="right"><a href="#Indice">Volver al índice</a></p>  
 
 <a href="#Indice">Volver al índice</a>
 ### Visualización en Looker   <p align="right"><a href="#Indice">Volver al índice</a></p>   
