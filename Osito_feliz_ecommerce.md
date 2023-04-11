@@ -1,3 +1,4 @@
+<a name="Tabla-de-contenido2"></a>
 ## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
@@ -61,6 +62,6 @@ order by YEAR, MES ASC;
 14. ¿Qué campañas son las que han dado más margen por productos?      
   
 <a name="Visualización-en-Looker2"></a>
-## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
 
