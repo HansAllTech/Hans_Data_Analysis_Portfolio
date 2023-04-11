@@ -1,3 +1,9 @@
+## Tabla de Contenido
+- [Problema de negocio](#Problema-de-negocio)
+- [Objetivo](#Objetivo)
+- [Diagrama](#Diagrama)
+- [Análisis Previo](#Análisis-Previo)   
+
 ## Problema de negocio   
 <p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
 Para solucionar este problema, se ha decidido llevar a cabo un análisis de datos para medir la conversión de la web y entender mejor las ventas e impacto de los productos. De esta manera, se busca identificar las áreas de mejora y las oportunidades de crecimiento para la empresa.</p>
