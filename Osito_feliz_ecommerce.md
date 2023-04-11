@@ -21,7 +21,7 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 ## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="center"> <img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
 
-<a name="Análisis-Previo2"></a><p align="right">.</p>
+<a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
 Puntos detectados:  
@@ -29,7 +29,7 @@ Puntos detectados:
 - Rango de tiempo de la tabla de pedidos.
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
-<a name="Análisis-de-Ventas2"></a><p align="right">.</p>    
+<a name="Análisis-de-Ventas2"></a> 
 ## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
 ```sql
@@ -49,7 +49,7 @@ order by YEAR, MES ASC;
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
 
-<a name="Análisis-de-Tráfico-Web2"></a><p align="right">.</p> 
+<a name="Análisis-de-Tráfico-Web2"></a>
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
@@ -60,7 +60,7 @@ order by YEAR, MES ASC;
 13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
 14. ¿Qué campañas son las que han dado más margen por productos?      
   
-<a name="Visualización-en-Looker2"></a><p align="right">.</p>    
+<a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 
 
