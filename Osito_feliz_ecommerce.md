@@ -20,7 +20,7 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 
 <a name="Diagrama2"></a>
 ## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg"></p>    
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" widht= 85% height=85%></p>    
 
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
