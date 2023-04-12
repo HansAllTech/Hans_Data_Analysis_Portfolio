@@ -128,19 +128,32 @@ LIMIT 10;
 
 3. ¿Cuál es el producto que mas vende en términos monetarios (Ventas brutas)?
 ```sql
-SELECT 
+SELECT
 product_name Producto,
 SUM(o.items_purchased*o.price_usd) Ventas_Brutas 
 FROM ositofeliz.orders o
 LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
 LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
-GROUP BY product_name
+GROUP BY Producto
+ORDER BY Ventas_Brutas DESC
 LIMIT 1;
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231349933-2623408e-3b5c-447f-b500-7f2245afd053.png"></p>
 
-
 4. ¿Cuál es el producto que deja más margen?
+```sql
+SELECT
+product_name Producto,
+SUM(o.items_purchased*o.price_usd) Ventas_Brutas,
+SUM(o.items_purchased*o.price_usd-o.cogs_usd) Margen
+FROM ositofeliz.orders o
+LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
+LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
+GROUP BY product_name
+ORDER BY Margen;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231511665-7ed3e158-321b-49e3-842a-bd91aa2c8fd0.png"></p>
+
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
