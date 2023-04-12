@@ -49,7 +49,7 @@ MAX(price_usd) Precio_maximo,
 ROUND(AVG(price_usd),2) Precio_promedio,
 COUNT(DISTINCT(primary_product_id)) Tipos_de_producto,
 FORMAT(COUNT(order_id),0,'en_US') Cantidad_ventas,
-FORMAT(SUM(price_usd-cogs_usd),2,'en_US') Total_neto
+FORMAT(SUM((price_usd-cogs_usd)*items_purchased),2,'en_US') Total_neto
 FROM ositofeliz.orders;
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231308111-5d6e6bd1-6e04-4db4-ab1e-c4e328c8f7da.png"></p>
@@ -59,7 +59,7 @@ FROM ositofeliz.orders;
 SELECT 
 product_name Producto,
 CONCAT(FORMAT((COUNT(o.order_id) / (SELECT COUNT(order_id) FROM ositofeliz.orders))*100,2),'%') Porcentaje,
-FORMAT(SUM(o.price_usd-o.cogs_usd),2,'en_US') Total_neto
+FORMAT(SUM((o.price_usd-o.cogs_usd)*o.items_purchased),2,'en_US') Total_neto
 FROM ositofeliz.orders o
 LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
 LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
