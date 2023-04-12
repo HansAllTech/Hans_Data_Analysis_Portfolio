@@ -21,3 +21,4 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL, Looker St
 ## 2. Análisis de Rotación de Personal [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 Lenguaje y herramientas utilizadas en el proyecto: ```Python```, ```Visual Studio Code```, ```Google Collab```
 
+ 
