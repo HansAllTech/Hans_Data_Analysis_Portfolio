@@ -199,13 +199,39 @@ LIMIT 3;
 <a name="Análisis-de-Tráfico-Web2"></a>
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
-8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones?
-9. Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
-10. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
-11. ¿Cúales son las sources o fuentes que han dado más ventas?
-12. ¿Cúales son los meses que han atraido más tráfico?
-13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
-14. ¿Qué campañas son las que han dado más margen por productos?      
+8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones
+```sql
+SELECT 
+utm_content Anuncio,
+DATEDIFF(MAX(created_at),MIN(created_at)) Duración_Anuncio,
+COUNT(website_session_id) Sesiones,
+ROUND(COUNT(website_session_id)*365/DATEDIFF(MAX(created_at),MIN(created_at)),0) Sesiones_por_Año
+FROM ositofeliz.website_sessions
+GROUP BY Anuncio
+ORDER BY Sesiones_por_Año DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231552264-ebc7f0f0-881f-4899-934b-6bc2faf7c9c4.png"></p>  
+
+
+
+9. ¿Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
+```sql
+SELECT 
+COUNT(website_session_id) Cantidad_sesiones,
+SUM(CASE WHEN is_repeat_session = 1 then 1 else 0 end) Sesiones_repetidas,
+COUNT(DISTINCT user_id) Cantidad_Usuarios
+FROM ositofeliz.website_sessions;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231565182-6c52795d-52ab-44a7-a39b-1eb2ba00a740.png"></p>  
+
+
+
+
+11. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
+12. ¿Cúales son las sources o fuentes que han dado más ventas?
+13. ¿Cúales son los meses que han atraido más tráfico?
+14. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
+15. ¿Qué campañas son las que han dado más margen por productos?      
   
 <a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
