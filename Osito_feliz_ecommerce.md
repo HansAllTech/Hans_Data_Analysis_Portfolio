@@ -157,7 +157,7 @@ ORDER BY Margen;
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
-
+ 
 <a name="Análisis-de-Tráfico-Web2"></a>
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
