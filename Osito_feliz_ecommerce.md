@@ -184,7 +184,18 @@ ORDER BY Ventas_Brutas DESC;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231526681-048a8948-76a3-4837-b078-b36fc69cdaf6.png"></p>  
 
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
- 
+ ```sql
+SELECT
+MONTH(o.created_at) Mes,
+YEAR(o.created_at) Año,
+SUM(o.items_purchased*o.price_usd) Ventas_Brutas
+FROM ositofeliz.orders o
+GROUP BY Año, Mes
+ORDER BY Ventas_Brutas DESC
+LIMIT 3;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231532091-dcea0b53-56d5-4f0d-8d20-af0d80d9e42b.png"></p>  
+
 <a name="Análisis-de-Tráfico-Web2"></a>
 ## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
