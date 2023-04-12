@@ -36,7 +36,7 @@ Puntos detectados:
 ```sql
 SELECT * FROM ositofeliz.website_sessions;
 ```
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231341794-4bb784a4-65a3-4329-8e5a-c9ae3ebb3345.png" width =85% height = 85%></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231341794-4bb784a4-65a3-4329-8e5a-c9ae3ebb3345.png" width =75% height = 75%></p>
 
 - _Orders_
 ```sql
