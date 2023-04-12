@@ -28,7 +28,7 @@ Antes de comenzar a responder a las preguntas de negocio que se nos solicita deb
 Puntos detectados:  
 
 - Rango de tiempo de la tabla de pedidos.
-- Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
+- Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.   
 
 <!--Análisis personal by HR Tec -->
 - [x] Analizando los datos de las diferentes tablas
