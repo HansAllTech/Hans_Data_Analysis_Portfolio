@@ -145,19 +145,44 @@ LIMIT 1;
 SELECT
 product_name Producto,
 SUM(o.items_purchased*o.price_usd) Ventas_Brutas,
-SUM(o.items_purchased*o.price_usd-o.cogs_usd) Margen
+SUM(o.items_purchased*(o.price_usd-o.cogs_usd)) Margen
 FROM ositofeliz.orders o
 LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
 LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
-GROUP BY product_name
-ORDER BY Margen;
+GROUP BY Producto
+ORDER BY Margen DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231511665-7ed3e158-321b-49e3-842a-bd91aa2c8fd0.png"></p>
   
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?  
-  
+```sql
+SELECT
+product_name Producto,
+DATE(MIN(o.created_at)) Fecha_venta
+FROM ositofeliz.orders o
+LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
+LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
+GROUP BY Producto;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231517983-b41f01d0-1505-4e54-b07f-61838d529cdd.png"></p>
+
+ 
 6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
-  
+```sql
+SELECT
+product_name Producto,
+YEAR(o.created_at) Año,
+SUM(o.items_purchased*o.price_usd) Ventas_Brutas,
+SUM(o.items_purchased*(o.price_usd-o.cogs_usd)) Margen_absoluto,
+ROUND(SUM(o.items_purchased*(o.price_usd-o.cogs_usd))/SUM(o.items_purchased*o.price_usd)*100,2) Margen_porcentual
+FROM ositofeliz.orders o
+LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
+LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
+GROUP BY Producto, Año
+ORDER BY Ventas_Brutas DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231526681-048a8948-76a3-4837-b078-b36fc69cdaf6.png"></p>  
+
 7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
  
 <a name="Análisis-de-Tráfico-Web2"></a>
