@@ -31,6 +31,33 @@ Puntos detectados:
 - Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.  
 
 <!--Análisis personal by HR Tec -->
+- [x] Analizando los datos de las diferentes tablas
+- _Website_sessions_
+```sql
+SELECT * FROM ositofeliz.website_sessions;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231341794-4bb784a4-65a3-4329-8e5a-c9ae3ebb3345.png" width =85% height = 85%></p>
+
+- _Orders_
+```sql
+SELECT * FROM ositofeliz.orders;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231342305-728a42d7-355a-44ee-b324-0e020c4033d4.png"></p>
+
+- _Orders_items_
+```sql
+SELECT * FROM ositofeliz.order_items;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231343099-5f0a0553-5865-485a-abde-b1fe83cc96ab.png"></p>
+
+- _Products_
+```sql
+SELECT * FROM ositofeliz.products;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231345504-2578c642-cc0b-48bb-aafd-8fc4a7f2746e.png"></p>
+
+
+
 - [x] Analizando periodo de ventas
 ```sql
 SELECT 
@@ -81,7 +108,24 @@ FROM orders
 group by MONTH (created_at), YEAR
 order by YEAR, MES ASC;  
 ```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231339517-7cded103-fe44-4bba-ac3f-06844eca69aa.png"></p>
+
+
 2. ¿Cuales son las ventas brutas medias de cada mes y año, devuelve los TOP 10? ¿Que puedes observar?
+```sql
+SELECT 
+MONTH(created_at) Mes,
+YEAR(created_at) Año,
+SUM(price_usd*items_purchased) Ventas_Brutas,
+ROUND(AVG(price_usd*items_purchased),2) Ventas_AVG
+FROM ositofeliz.orders
+GROUP BY Mes, Año
+ORDER BY Ventas_AVG DESC, Mes DESC, Año DESC
+LIMIT 10;
+```
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231339831-8213427a-0b50-4137-9ab5-aa76be26cfcb.png"></p>
+
+
 3. ¿Cuál es el producto que mas vende en términos monetarios (Ventas brutas)?
 4. ¿Cuál es el producto que deja más margen?
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?
