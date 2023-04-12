@@ -151,7 +151,7 @@ LEFT JOIN ositofeliz.order_items oi ON o.order_id = oi.order_id
 LEFT JOIN ositofeliz.products p ON oi.product_id = p.product_id	
 GROUP BY product_name
 ORDER BY Margen;
-```
+``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231511665-7ed3e158-321b-49e3-842a-bd91aa2c8fd0.png"></p>
   
 5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?  
