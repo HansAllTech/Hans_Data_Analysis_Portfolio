@@ -20,7 +20,7 @@ Para solucionar este problema, se ha decidido llevar a cabo un análisis de dato
 
 <a name="Diagrama2"></a>
 ## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" widht= 85% height=85%></p>    
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" width= 60% height=60%></p>    
 
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
@@ -36,7 +36,7 @@ Puntos detectados:
 ```sql
 SELECT * FROM ositofeliz.website_sessions;
 ```
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231341794-4bb784a4-65a3-4329-8e5a-c9ae3ebb3345.png" width =75% height = 75%></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231341794-4bb784a4-65a3-4329-8e5a-c9ae3ebb3345.png" width =85% height = 85%></p>
 
 - _Orders_
 ```sql
@@ -212,8 +212,6 @@ ORDER BY Sesiones_por_Año DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231552264-ebc7f0f0-881f-4899-934b-6bc2faf7c9c4.png"></p>  
 
-
-
 9. ¿Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
 ```sql
 SELECT 
@@ -224,15 +222,69 @@ FROM ositofeliz.website_sessions;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231565182-6c52795d-52ab-44a7-a39b-1eb2ba00a740.png"></p>  
 
+10. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
+```sql
+SELECT 
+utm_source Fuente,
+COUNT(DISTINCT user_id) Cantidad_usuarios,
+COUNT(website_session_id) Cantidad_sesiones
+FROM ositofeliz.website_sessions
+GROUP BY fuente
+ORDER BY cantidad_usuarios DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618326-12907a60-09ca-4095-806b-64dcfdc230eb.png"></p>  
 
+11. ¿Cúales son las sources o fuentes que han dado más ventas?
+```sql
+SELECT 
+w.utm_source Canal,
+SUM(o.items_purchased*o.price_usd) Ventas_brutas,
+SUM(o.items_purchased*(o.price_usd-o.cogs_usd)) Ventas_netas
+FROM ositofeliz.website_sessions w 
+LEFT JOIN ositofeliz.orders o ON o.website_session_id = w.website_session_id
+GROUP BY Canal
+ORDER BY Ventas_netas DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618419-fbb35ad0-e19f-4805-acf6-bb6717bf13b9.png"></p>  
 
+12. ¿Cúales son los meses que han atraido más tráfico?
+```sql
+SELECT 
+DATE_FORMAT(created_at,'%M-%Y') Mes_año,
+COUNT(website_session_id) Cantidad_sesiones
+FROM ositofeliz.website_sessions
+GROUP BY Mes_año
+ORDER BY Cantidad_sesiones DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618528-c6bee3b3-8320-4f1c-8fd0-b5b674f6797e.png"></p>  
 
-11. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
-12. ¿Cúales son las sources o fuentes que han dado más ventas?
-13. ¿Cúales son los meses que han atraido más tráfico?
-14. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
-15. ¿Qué campañas son las que han dado más margen por productos?      
-  
+13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
+```sql
+DATE_FORMAT(created_at,'%M-%Y') Mes_año,
+device_type Dispositivos,
+COUNT(website_session_id) Cantidad_sesiones
+FROM ositofeliz.website_sessions
+GROUP BY Dispositivos, Mes_año
+HAVING Mes_año = 'November-2012';
+#ORDER BY Cantidad_sesiones DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618710-9ad91a1b-6725-4c45-875b-95a0e06b68fe.png"></p>  
+
+14. ¿Qué campañas son las que han dado más margen por productos?      
+```sql
+SELECT
+w.utm_campaign Campaña,
+product_name Producto,
+SUM(o.items_purchased*(o.price_usd-o.cogs_usd)) Margen
+FROM ositofeliz.website_sessions w
+INNER JOIN ositofeliz.orders o ON o.website_session_id = w.website_session_id
+LEFT JOIN ositofeliz.order_items oi ON oi.order_id = o.order_id
+LEFT JOIN ositofeliz.products p ON p.product_id = oi.product_id
+GROUP BY Campaña, Producto
+ORDER BY Margen DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618802-7ecfba6b-e037-43c4-8342-9b10eb444762.png"></p>  
+
 <a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
  
