@@ -287,5 +287,6 @@ ORDER BY Margen DESC;
 
 <a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+Aquí veremos la visualización de un dashboard en looker
  
  
