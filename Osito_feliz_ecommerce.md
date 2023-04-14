@@ -266,7 +266,6 @@ COUNT(website_session_id) Cantidad_sesiones
 FROM ositofeliz.website_sessions
 GROUP BY Dispositivos, Mes_año
 HAVING Mes_año = 'November-2012';
-#ORDER BY Cantidad_sesiones DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618710-9ad91a1b-6725-4c45-875b-95a0e06b68fe.png"></p>  
 
