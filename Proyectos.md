@@ -15,7 +15,7 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL, Looker St
   
 - [x] [`Ir al Proyecto`](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)
 
- 
+  
  
 <a name="Proyecto2"></a>
 ## 2. Análisis de Rotación de Personal [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
