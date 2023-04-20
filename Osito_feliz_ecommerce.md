@@ -220,6 +220,7 @@ SUM(CASE WHEN is_repeat_session = 1 then 1 else 0 end) Sesiones_repetidas,
 COUNT(DISTINCT user_id) Cantidad_Usuarios
 FROM ositofeliz.website_sessions;
 ``` 
+ 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231565182-6c52795d-52ab-44a7-a39b-1eb2ba00a740.png"></p>  
 
 10. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
