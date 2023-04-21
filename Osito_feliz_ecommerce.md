@@ -392,7 +392,8 @@ GROUP BY utm_source;
 <a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Aquí veremos la visualización de un dashboard en looker
+[Ir al Dashboard](https://lookerstudio.google.com/reporting/8ac34c00-e322-494c-9817-211743495067/page/gEsMD?s=qrsI1gKtGYI)    
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233740491-068c6b28-41d6-44cf-9fb2-2dec49bdbc72.png"></p>  
 
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/231836772-f3d1e6ec-39b4-4c43-b277-74d6cce63e09.png"></p>  
 
 
