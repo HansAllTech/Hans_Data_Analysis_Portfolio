@@ -287,7 +287,44 @@ ORDER BY Margen DESC;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618802-7ecfba6b-e037-43c4-8342-9b10eb444762.png"></p>    
 
 <a name="Análisis-Avanzado2"></a>
-## Análisis avanzado [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Análisis avanzado [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+
+**Datos relevantes**   
+```sql
+SELECT
+w.utm_campaign Campaña,
+product_name Producto,
+SUM(o.price_usd*o.items_purchased) Ventas_brutas,
+SUM(o.items_purchased*(o.price_usd - o.cogs_usd)) Margen_absoluto,
+SUM(o.cogs_usd) Costos,
+COUNT(w.utm_campaign) Cantidad_campaña,
+COUNT(w.utm_campaign)/(SELECT COUNT(website_session_id) FROM website_sessions) Conversion_campaña,
+COUNT(o.order_id) Cantidad_orders,
+COUNT(o.order_id)/(SELECT COUNT(website_session_id) FROM website_sessions) Conversion_order
+FROM ositofeliz.website_sessions w
+INNER JOIN ositofeliz.orders o ON o.website_session_id = w.website_session_id
+LEFT JOIN ositofeliz.order_items oi ON oi.order_id = o.order_id
+LEFT JOIN ositofeliz.products p ON p.product_id = oi.product_id
+GROUP BY Campaña, Producto
+ORDER BY Margen_absoluto DESC;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739320-870082c9-538a-45eb-8dbf-5acf4df038c9.png"></p>  
+
+**Tasa de conversion**   
+```sql
+SELECT 
+EXTRACT(YEAR_MONTH FROM w.created_at) Año_mes,
+COUNT(o.order_id)/(SELECT COUNT(website_session_id) FROM website_sessions) Conversion,
+COUNT(o.order_id) Conversion_cantidad,
+COUNT(w.website_session_id) Cantidad_sesiones
+FROM ositofeliz.website_sessions w
+LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
+GROUP BY Año_mes;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739461-f8881ff0-2341-4eaf-b896-183effa707ac.png"></p>
+
+
+
 
 <a name="Visualización-en-Looker2"></a>
 ## Visualización en Looker [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
