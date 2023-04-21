@@ -399,9 +399,9 @@ Visualización de un dashboard en looker
 
 <a name="Conclusiones2"></a>
 ## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-<p align="justify"> - 
-Con respecto a la cantidad de ventas se tiene un incremento de gradual favorable sobre el resto durante los meses de Abril de un 66% y Noviembre de 65% con respecto a los meses que les anteceden, esto puede ser una correlación directa con respecto a la estacionalidad y/o festividades que se estan llevando durante esos meses los cuales hace que la demanda se incremente.<br>
-Dentro del análisi se evidencia que la cantidad de sesiones web tiene conversion total de 4.4% esto significa que por cada 15k de clientes que visitan la página web uno es el que genera una orden de un osito. Por otro parte se puede evaluar que esta tasa de conversion resulta favorable puesto que hay un margen absoluto de $93.47k el cual esta por encima del total de costes de 59.64k que estan asociados a la produccion invididual de cada osito.<br>
+<p align="justify"> 
+Con respecto a la cantidad de ventas se tiene un incremento de gradual favorable sobre el resto durante los meses de Abril de un 66% y Noviembre de 65% con respecto a los meses que les anteceden, esto puede ser una correlación directa con respecto a la estacionalidad y/o festividades que se estan llevando durante esos meses los cuales hace que la demanda se incremente.<br><br>
+Dentro del análisi se evidencia que la cantidad de sesiones web tiene conversion total de 4.4% esto significa que por cada 15k de clientes que visitan la página web uno es el que genera una orden de un osito. Por otro parte se puede evaluar que esta tasa de conversion resulta favorable puesto que hay un margen absoluto de $93.47k el cual esta por encima del total de costes de 59.64k que estan asociados a la produccion invididual de cada osito.<br><br>
 Dentro del análisis de trafico web se evidencia de que hay tres fuentes principales de conversión. La conversion por publicidad, por campaña y por buscador web. Siendo la de mayor captación de potenciales clientes, la conversion de por campaña con un aproximado de de 2659 conversiones por este medio. Dentro de la cual la campaña que tuvo mayor rendimiento ha sido la de "Brand awareness" obteniendo un rendimiento con respecto al resto de 80.4% lo que representa un total de 2453 conversiones.</p>   
 
 <a name="Recomendaciones2"></a>
