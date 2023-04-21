@@ -286,7 +286,7 @@ ORDER BY Margen DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618802-7ecfba6b-e037-43c4-8342-9b10eb444762.png"></p>    
 
-<a name="Analisis-Avanzado2"></a>
+<a name="Análisis-Avanzado2"></a>
 ## Análisis avanzado [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
 <a name="Visualización-en-Looker2"></a>
