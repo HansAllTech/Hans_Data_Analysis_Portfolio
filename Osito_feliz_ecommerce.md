@@ -321,7 +321,46 @@ FROM ositofeliz.website_sessions w
 LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
 GROUP BY Año_mes;
 ``` 
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739461-f8881ff0-2341-4eaf-b896-183effa707ac.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739461-f8881ff0-2341-4eaf-b896-183effa707ac.png"></p>  
+
+**Ventas & Margen**   
+```sql
+SELECT 
+EXTRACT(YEAR_MONTH FROM created_at) Año_mes,
+SUM(price_usd*items_purchased) Ventas_brutas,
+SUM(items_purchased*(price_usd - cogs_usd)) Margen_absoluto,
+SUM(cogs_usd) Costos
+FROM orders
+GROUP BY Año_mes
+ORDER BY Año_mes ASC;  
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739681-a494c42c-48b7-4a23-8903-f80d55c2b994.png"></p>
+
+**Cantidad de ventas e incremento**   
+```sql
+SELECT 
+EXTRACT(YEAR_MONTH FROM created_at) Año_mes,
+COUNT(order_id) Cantidad_ventas,
+LAG(COUNT(order_id),1,0) OVER (ORDER BY EXTRACT(YEAR_MONTH FROM created_at)) Cantidad_anterior,
+COUNT(order_id) - LAG(COUNT(order_id),1,0) OVER (ORDER BY EXTRACT(YEAR_MONTH FROM created_at)) Incremento,
+(COUNT(order_id) - LAG(COUNT(order_id),1,0) OVER (ORDER BY EXTRACT(YEAR_MONTH FROM created_at)))/(LAG(COUNT(order_id),1,0) OVER (ORDER BY EXTRACT(YEAR_MONTH FROM created_at))) Tasa_incremento
+FROM ositofeliz.orders
+GROUP BY Año_mes;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739820-d8680e4a-e8f6-40aa-a61b-7852288b4006.png"></p>  
+
+**Conversión por Campaña**   
+```sql
+SELECT
+utm_campaign Campaña,
+COUNT(o.order_id) Cantidad_Conversion,
+COUNT(o.order_id)/(SELECT COUNT(website_session_id) FROM website_sessions) Tasa_conversion,
+COUNT(o.order_id)/(SELECT COUNT(order_id) FROM ositofeliz.orders) Porcentaje
+FROM ositofeliz.website_sessions w
+LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
+GROUP BY utm_campaign;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739936-4fac3ab7-1670-46d1-bffe-aacaf91e6198.png"></p>  
 
 
 
