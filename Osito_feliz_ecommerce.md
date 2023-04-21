@@ -360,9 +360,33 @@ FROM ositofeliz.website_sessions w
 LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
 GROUP BY utm_campaign;
 ``` 
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739936-4fac3ab7-1670-46d1-bffe-aacaf91e6198.png"></p>  
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739936-4fac3ab7-1670-46d1-bffe-aacaf91e6198.png"></p>   
 
+**Conversión por Publicidad**   
+```sql
+SELECT 
+utm_content Publicidad,
+COUNT(o.order_id) Cantidad_conversion,
+COUNT(o.order_id)/(SELECT COUNT(website_session_id) FROM website_sessions) Tasa_conversion,
+COUNT(o.order_id)/(SELECT COUNT(order_id) FROM ositofeliz.orders) Porcentaje
+FROM ositofeliz.website_sessions w
+LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
+GROUP BY utm_content;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233740131-30bcad3a-e736-4800-8900-6b8c5cb4540c.png"></p>    
 
+**Conversión por Buscador**   
+```sql
+SELECT 
+utm_source Buscador,
+COUNT(o.order_id) Cantidad_Conversion,
+COUNT(o.order_id)/(SELECT COUNT(website_session_id) FROM website_sessions) Tasa_conversion,
+COUNT(o.order_id)/(SELECT COUNT(order_id) FROM ositofeliz.orders) Porcentaje
+FROM ositofeliz.website_sessions w
+LEFT JOIN ositofeliz.orders o ON w.website_session_id = o.website_session_id
+GROUP BY utm_source;
+``` 
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233740256-443205b2-b599-491d-84b4-25f63fd00a6f.png"></p>  
 
 
 <a name="Visualización-en-Looker2"></a>
