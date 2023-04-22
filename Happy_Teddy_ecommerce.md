@@ -4,7 +4,7 @@
 
 
 <a name="Tabla-de-contenido2"></a>
-## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Table of content [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 - [Business Problem](#Problema)
 - [Objective](#Objetivo2)
 - [Diagram](#Diagrama2)
@@ -31,14 +31,14 @@ To solve this problem, it has been decided to carry out a data analysis to measu
 
 <a name="Análisis-Previo2"></a>
 ## Preliminary Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
-Puntos detectados:  
+Before starting to answer the business questions that we are asked, we must understand the tables, how they are composed, and how they relate to each other.
+Detected points:  
 
-- Rango de tiempo de la tabla de pedidos.
-- Si cada pedido de la tabla de pedidos tiene más de 1 elemento por eso se relaciona con la tabla de order_item. Entendemos se relaciona con la tabla items_purchase.   
+- Time range of the orders table.
+- If each order in the orders table has more than 1 item, it relates to the order_item table. We understand it relates to the items_purchase table.   
 
 <!--Análisis personal by HR Tec -->
-- [x] Analizando los datos de las diferentes tablas
+- [x] Analyzing the data from the different tables.
 - _Website_sessions_
 ```sql
 SELECT * FROM ositofeliz.website_sessions;
@@ -65,7 +65,7 @@ SELECT * FROM ositofeliz.products;
 
 
 
-- [x] Analizando periodo de ventas
+- [x] Analyzing sales period
 ```sql
 SELECT 
 MIN(created_at) Primera_venta,
@@ -75,7 +75,7 @@ FROM ositofeliz.orders;
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231295886-87ebf940-7cb7-4f91-ab20-d6f8ef318532.png"></p>
 
-- [x]  Analizando las ventas, tipo de producto vendidos, cantidad de ventas y ventas netas 
+- [x]  Analyzing sales, type of products sold, quantity of sales, and net sales.
 ```sql
 SELECT 
 MIN(price_usd) Precio_minimo,
@@ -88,7 +88,7 @@ FROM ositofeliz.orders;
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231308111-5d6e6bd1-6e04-4db4-ab1e-c4e328c8f7da.png"></p>
 
-- [x] Analizando Porcentaje de venta neta por producto
+- [x] Analyzing Net Sales Percentage by Product.
 ```sql
 SELECT 
 product_name Producto,
@@ -103,8 +103,8 @@ GROUP BY product_name;
 
 
 <a name="Análisis-de-Ventas2"></a> 
-## Análisis de Ventas [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-1. Queremos saber cuales son las ventas por año y por mes en términos brutos y luego el margen absoluto.  
+## Sales Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+1. We want to know the sales by year and by month in gross terms and then the absolute margin.  
 ```sql
 SELECT 
 MONTH (created_at) as MES, 
@@ -118,7 +118,7 @@ order by YEAR, MES ASC;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231339517-7cded103-fe44-4bba-ac3f-06844eca69aa.png"></p>
 
 
-2. ¿Cuales son las ventas brutas medias de cada mes y año, devuelve los TOP 10? ¿Que puedes observar?
+2. What are the average gross sales for each month and year, return the TOP 10? What can you observe?
 ```sql
 SELECT 
 MONTH(created_at) Mes,
@@ -133,7 +133,7 @@ LIMIT 10;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231339831-8213427a-0b50-4137-9ab5-aa76be26cfcb.png"></p>
 
 
-3. ¿Cuál es el producto que mas vende en términos monetarios (Ventas brutas)?
+3. What is the product that sells the most in monetary terms (gross sales)?
 ```sql
 SELECT
 product_name Producto,
@@ -147,7 +147,7 @@ LIMIT 1;
 ```
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231349933-2623408e-3b5c-447f-b500-7f2245afd053.png"></p>
 
-4. ¿Cuál es el producto que deja más margen?
+4. What is the product with the highest profit margin?
 ```sql
 SELECT
 product_name Producto,
@@ -161,7 +161,7 @@ ORDER BY Margen DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231511665-7ed3e158-321b-49e3-842a-bd91aa2c8fd0.png"></p>
   
-5. ¿Podemos saber cúal es la fecha de lanzamiento de cada producto?  
+5. Can we know the release date of each product?
 ```sql
 SELECT
 product_name Producto,
@@ -174,7 +174,7 @@ GROUP BY Producto;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231517983-b41f01d0-1505-4e54-b07f-61838d529cdd.png"></p>
 
  
-6. Calcula las ventas brutas por año asi como el margen numérico y porcentual de cada producto y ordénalo por producto.
+6. Calculate gross sales by year as well as the numerical and percentage margin for each product, and sort it by product.
 ```sql
 SELECT
 product_name Producto,
@@ -190,7 +190,7 @@ ORDER BY Ventas_Brutas DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231526681-048a8948-76a3-4837-b078-b36fc69cdaf6.png"></p>  
 
-7. ¿Cuáles son los meses con mayor venta bruta, devuelve los TOP 3?  
+7. Which are the months with the highest gross sales, return the TOP 3? 
  ```sql
 SELECT
 MONTH(o.created_at) Mes,
@@ -204,9 +204,9 @@ LIMIT 3;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231532091-dcea0b53-56d5-4f0d-8d20-af0d80d9e42b.png"></p>  
 
 <a name="Análisis-de-Tráfico-Web2"></a>
-## Análisis de Tráfico Web [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Web Traffic Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 
-8. ¿Cuales son los ads(anuncios) o contenidos que han atraído más sesiones
+8. What are the ads or contents that have attracted the most sessions?
 ```sql
 SELECT 
 utm_content Anuncio,
@@ -219,7 +219,7 @@ ORDER BY Sesiones_por_Año DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231552264-ebc7f0f0-881f-4899-934b-6bc2faf7c9c4.png"></p>  
 
-9. ¿Es lo mismo sesiones que usuarios?¿Cuál es la cantidad de usuarios individuales?
+9. Is sessions the same as users? What is the number of individual users?
 ```sql
 SELECT 
 COUNT(website_session_id) Cantidad_sesiones,
@@ -230,7 +230,7 @@ FROM ositofeliz.website_sessions;
  
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231565182-6c52795d-52ab-44a7-a39b-1eb2ba00a740.png"></p>  
 
-10. ¿Y por source o fuente? Cantidad de usuarios y sesiones?
+10. And by source or channel? Number of users and sessions?
 ```sql
 SELECT 
 utm_source Fuente,
@@ -242,7 +242,7 @@ ORDER BY cantidad_usuarios DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618326-12907a60-09ca-4095-806b-64dcfdc230eb.png"></p>  
 
-11. ¿Cúales son las sources o fuentes que han dado más ventas?
+11. What are the sources that have generated the most sales?
 ```sql
 SELECT 
 w.utm_source Canal,
@@ -255,7 +255,7 @@ ORDER BY Ventas_netas DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618419-fbb35ad0-e19f-4805-acf6-bb6717bf13b9.png"></p>  
 
-12. ¿Cúales son los meses que han atraido más tráfico?
+12. What are the months that have attracted the most traffic?
 ```sql
 SELECT 
 DATE_FORMAT(created_at,'%M-%Y') Mes_año,
@@ -266,7 +266,7 @@ ORDER BY Cantidad_sesiones DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618528-c6bee3b3-8320-4f1c-8fd0-b5b674f6797e.png"></p>  
 
-13. Ya que vimos el mes que ha tenido más trafico, podrías ver de ese mes la cantidad de sesiones que han venido por movil y la cantidad que han venido por ordenador?
+13. Since we saw the month that has had the most traffic, could you see for that month the number of sessions that have come from mobile and the number that have come from desktop?
 ```sql
 DATE_FORMAT(created_at,'%M-%Y') Mes_año,
 device_type Dispositivos,
@@ -277,7 +277,7 @@ HAVING Mes_año = 'November-2012';
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618710-9ad91a1b-6725-4c45-875b-95a0e06b68fe.png"></p>  
 
-14. ¿Qué campañas son las que han dado más margen por productos?      
+14. What campaigns have yielded the highest margin per product?      
 ```sql
 SELECT
 w.utm_campaign Campaña,
@@ -293,9 +293,9 @@ ORDER BY Margen DESC;
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231618802-7ecfba6b-e037-43c4-8342-9b10eb444762.png"></p>    
 
 <a name="Análisis-Avanzado2"></a>
-## Análisis avanzado [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Advanced analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 
-**Datos relevantes**   
+**Relevant data**   
 ```sql
 SELECT
 w.utm_campaign Campaña,
@@ -316,7 +316,7 @@ ORDER BY Margen_absoluto DESC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739320-870082c9-538a-45eb-8dbf-5acf4df038c9.png"></p>  
 
-**Tasa de conversion**   
+**Conversion rate**   
 ```sql
 SELECT 
 EXTRACT(YEAR_MONTH FROM w.created_at) Año_mes,
@@ -329,7 +329,7 @@ GROUP BY Año_mes;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739461-f8881ff0-2341-4eaf-b896-183effa707ac.png"></p>  
 
-**Ventas & Margen**   
+**Sales & Margin**   
 ```sql
 SELECT 
 EXTRACT(YEAR_MONTH FROM created_at) Año_mes,
@@ -342,7 +342,7 @@ ORDER BY Año_mes ASC;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739681-a494c42c-48b7-4a23-8903-f80d55c2b994.png"></p>
 
-**Cantidad de ventas e incremento**   
+**Number of sales and increase**   
 ```sql
 SELECT 
 EXTRACT(YEAR_MONTH FROM created_at) Año_mes,
@@ -355,7 +355,7 @@ GROUP BY Año_mes;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739820-d8680e4a-e8f6-40aa-a61b-7852288b4006.png"></p>  
 
-**Conversión por Campaña**   
+**Conversion by Campaign**   
 ```sql
 SELECT
 utm_campaign Campaña,
@@ -368,7 +368,7 @@ GROUP BY utm_campaign;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233739936-4fac3ab7-1670-46d1-bffe-aacaf91e6198.png"></p>   
 
-**Conversión por Publicidad**   
+**Conversion by Advertisement**   
 ```sql
 SELECT 
 utm_content Publicidad,
@@ -381,7 +381,7 @@ GROUP BY utm_content;
 ``` 
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233740131-30bcad3a-e736-4800-8900-6b8c5cb4540c.png"></p>    
 
-**Conversión por Buscador**   
+**Conversion by Search Engine**   
 ```sql
 SELECT 
 utm_source Buscador,
@@ -397,25 +397,26 @@ GROUP BY utm_source;
 
 <a name="Visualización-en-Looker2"></a>
 ## Dashboard [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-Visualización en looker
+ Looker Visualization
 [`Ir al Dashboard`](https://lookerstudio.google.com/reporting/8ac34c00-e322-494c-9817-211743495067/page/gEsMD?s=qrsI1gKtGYI)    
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233752456-920e9e8e-28a0-486f-991b-85cffcc86f06.png"></p>    
 
 
 
 <a name="Conclusiones2"></a>
-## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Conclusions[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify"> 
-En cuanto a la cantidad de ventas, se ha observado un incremento gradual favorable durante los meses de abril y noviembre, con un aumento del 66% y 65% respectivamente en comparación con los meses anteriores. Este incremento podría estar correlacionado directamente con la estacionalidad y/o festividades que se celebran durante esos meses, lo cual aumenta la demanda de los ositos.<br><br>
-En el análisis se ha evidenciado que la tasa de conversión de la página web es del 4.4%, lo que significa que por cada 15,000 visitantes, uno realiza una compra de un osito. Por otro lado, se ha evaluado que esta tasa de conversión es favorable, ya que se ha obtenido un margen absoluto de $93.47k, que es mayor al costo total de producción individual de cada osito de $59.64k.<br><br>
-En el análisis del tráfico web se ha identificado que hay tres principales fuentes de conversión: publicidad, campañas y buscadores web. Se ha observado que la fuente con mayor captación de potenciales clientes es la conversión por campaña, con un total aproximado de 2659 conversiones por este medio. Se ha determinado que la campaña de "Brand Awareness" ha obtenido el mejor rendimiento en comparación con el resto, logrando una tasa de conversión del 80.4% lo que representa un total de 2453 conversiones.<br><br>
-Durante el análisis, se ha observado que los productos que han generado ventas son los ositos cariñoso y osito amor por siempre, siendo el primero el que ha generado mayores ingresos. Sin embargo, este resultado no es concluyente al 100% debido a que el lanzamiento del producto "Osito amor por siempre" se realizó en enero del año 2013, nueve meses después del lanzamiento del producto "Osito cariñoso" en marzo del 2012. Por lo tanto, se requiere recopilar más información para realizar un análisis más exhaustivo y determinar si la diferencia en el tiempo de lanzamiento ha tenido algún impacto en las ventas de cada producto."
+Regarding the sales volume, a favorable gradual increase has been observed during the months of April and November, with a 66% and 65% increase respectively compared to the previous months. This increase could be directly correlated with the seasonality and/or festivities celebrated during those months, which increases the demand for teddy bears.<br><br>
+The analysis has shown that the conversion rate of the website is 4.4%, which means that for every 15,000 visitors, one purchases a teddy bear. On the other hand, it has been evaluated that this conversion rate is favorable, as an absolute margin of $93.47k has been obtained, which is higher than the total individual production cost of each teddy bear, which is $59.64k.<br><br>
+In the web traffic analysis, three main sources of conversion have been identified: advertising, campaigns, and web search engines. It has been observed that the source with the highest potential customer acquisition is the conversion by campaign, with an approximate total of 2,659 conversions through this channel. It has been determined that the "Brand Awareness" campaign has performed the best compared to the others, achieving a conversion rate of 80.4%, representing a total of 2,453 conversions.<br><br>
+During the analysis, it has been observed that the products that have generated sales are the "Ositos cariñosos" and "Osito amor por siempre", with the former generating higher revenues. However, this result is not 100% conclusive due to the fact that the launch of the "Osito amor por siempre" product was done in January 2013, nine months after the launch of the "Ositos cariñosos" product in March 2012. Therefore, more information is required to conduct a more thorough analysis and determine if the difference in launch time has had any impact on the sales of each product.
 </p>   
 
 <a name="Recomendaciones2"></a>
-## Recomendaciones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Recomendations[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify"> 
-Basado en el análisis realizado, se sugiere que la empresa realice una planificación y estrategia de marketing específica para los meses de abril y noviembre, aprovechando la posible correlación directa con las festividades y estacionalidad de esos meses. Esto puede ayudar a capitalizar el aumento de la demanda de los ositos y aumentar aún más las ventas. Además, se recomienda seguir monitoreando y evaluando los resultados para ajustar la estrategia según sea necesario.<br><br>
-Se sugiere que la empresa continúe enfocándose en aumentar el tráfico a su página web y en mejorar la tasa de conversión. Se podrían considerar estrategias para atraer más visitantes, como aumentar la presencia en redes sociales y publicidad en línea. También se podría analizar la experiencia del usuario en la página web para identificar oportunidades de mejora y optimizar el proceso de compra, se podría utilizar herramientas como el mapa de experiencia de usuario, mapa de empatía, entre otros.<br><br>
-Si bien es cierto que la campaña de "Brand Awareness" ha obtenido un buen rendimiento en comparación con las demás, es importante seguir invirtiendo en estrategias de posicionamiento para aumentar la captación de clientes. Sin embargo, también es necesario ser crítico y destacar que el segundo mayor porcentaje de conversión de clientes no se debió a una campaña específica, además obtuvo un porcentaje del 12.8%, lo que representa un total de 392 clientes. Por lo tanto, se recomienda considerar la realización de pruebas A/B para evaluar la efectividad de diferentes campañas y determinar cuáles son las que generan un mayor impacto en la tasa de conversión.<br><br>
-Se sugiere realizar un seguimiento detallado de las ventas de los productos "Ositos cariñosos" y "Osito amor por siempre" durante un periodo de al menos un año, para poder comparar su rendimiento a largo plazo y determinar cuál de los dos productos es realmente el que genera mayores ingresos de manera consistente. Además, se podría analizar el impacto de factores externos, como la competencia en el mercado de peluches y las tendencias de consumo, para obtener una visión más completa de la situación.
+Based on the analysis conducted, it is suggested that the company creates a specific marketing plan and strategy for the months of April and November, taking advantage of the possible direct correlation with the holidays and seasonality of those months. This can help capitalize on the increase in demand for the teddy bears and further increase sales. Additionally, it is recommended to continue monitoring and evaluating the results to adjust the strategy as needed.<br><br>
+It is suggested that the company continue to focus on increasing traffic to their website and improving the conversion rate. Strategies to attract more visitors could be considered, such as increasing social media presence and online advertising. The user experience on the website could also be analyzed to identify opportunities for improvement and optimize the purchasing process, using tools such as the user experience map, empathy map, among others.<br><br>
+While it is true that the "Brand Awareness" campaign has performed well compared to others, it is important to continue investing in positioning strategies to increase customer acquisition. However, it is also necessary to be critical and highlight that the second highest percentage of customer conversion was not due to a specific campaign, but rather obtained a percentage of 12.8%, which represents a total of 392 customers. Therefore, it is recommended to consider conducting A/B testing to evaluate the effectiveness of different campaigns and determine which ones have a greater impact on the conversion rate.<br><br>
+It is suggested to closely monitor the sales of "Ositos cariñosos" and "Osito amor por siempre" products for a period of at least one year to compare their long-term performance and determine which of the two products consistently generates greater revenue. Additionally, the impact of external factors such as competition in the stuffed toy market and consumption trends could be analyzed to obtain a more complete picture of the situation.</p>
+
