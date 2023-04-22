@@ -3,20 +3,18 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233751984-9b50e4fe-cefa-48b4-9592-cde79c28a794.png" width=30% height=30%></p>
 
 
-
-
 <a name="Tabla-de-contenido2"></a>
-## Table of Contents [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-- [Problema de negocio](#Problema)
-- [Objetivo](#Objetivo2)
-- [Diagrama](#Diagrama2)
-- [Análisis Previo](#Análisis-Previo2)   
-- [Análisis de Ventas](#Análisis-de-Ventas2)
-- [Análisis de Tráfico Web](#Análisis-de-Tráfico-Web2)
-- [Análisis Avanzado](#Análisis-Avanzado2)
+## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+- [Business Problem](#Problema)
+- [Objective](#Objetivo2)
+- [Diagram](#Diagrama2)
+- [Preliminary Analysis](#Análisis-Previo2)   
+- [Sales Analysis](#Análisis-de-Ventas2)
+- [Web Traffic Analysis](#Análisis-de-Tráfico-Web2)
+- [Advanced Analysis](#Análisis-Avanzado2)
 - [Dashboard](#Visualización-en-Looker2)   
-- [Conclusiones](#Conclusiones2) 
-- [Recomendaciones](#Recomendaciones2) 
+- [Conclusions](#Conclusiones2) 
+- [Recommendations](#Recomendaciones2) 
  
 <a name="Problema"></a>    
 ## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
