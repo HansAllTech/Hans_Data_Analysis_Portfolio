@@ -9,11 +9,11 @@ Los softwares utilizados en cada proyecto dependerán de los requisitos específ
 Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.</p>
 
 <a name="Proyecto1"></a>
-## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.<br>
 Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>  
   
-- [x] [`Ir al Proyecto`](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)
+- [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en)
  
     
   
