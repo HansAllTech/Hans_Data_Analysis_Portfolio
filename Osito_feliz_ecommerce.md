@@ -1,38 +1,39 @@
 <a name="Inicio"></a>    
-# Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+# Financial Analysis & Web Traffic - Osito Feliz E-commerce [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233751984-9b50e4fe-cefa-48b4-9592-cde79c28a794.png" width=30% height=30%></p>
+
 
 
 
 
 <a name="Tabla-de-contenido2"></a>
 ## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-- [Problema de negocio](#Problema)
-- [Objetivo](#Objetivo2)
-- [Diagrama](#Diagrama2)
-- [Análisis Previo](#Análisis-Previo2)   
-- [Análisis de Ventas](#Análisis-de-Ventas2)
-- [Análisis de Tráfico Web](#Análisis-de-Tráfico-Web2)
-- [Análisis Avanzado](#Análisis-Avanzado2)
+- [Business Problem](#Problema)
+- [Objective](#Objetivo2)
+- [Diagram](#Diagrama2)
+- [Preliminary Analysis](#Análisis-Previo2)   
+- [Sales Analysis](#Análisis-de-Ventas2)
+- [Web Traffic Analysis](#Análisis-de-Tráfico-Web2)
+- [Advanced Analysis](#Análisis-Avanzado2)
 - [Dashboard](#Visualización-en-Looker2)   
-- [Conclusiones](#Conclusiones2) 
-- [Recomendaciones](#Recomendaciones2) 
+- [Conclusions](#Conclusiones2) 
+- [Recommendations](#Recomendaciones2) 
  
 <a name="Problema"></a>    
-## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align="justify"> El problema de negocio para la empresa de ecommerce online llamada "Osito Feliz" es que necesita mejorar sus ventas y su impacto en el mercado. A pesar de contar con 4 modelos de peluches muy atractivos, la empresa no ha logrado alcanzar su máximo potencial y se encuentra en una situación estancada.
-Para solucionar este problema, se ha decidido llevar a cabo un análisis de datos para medir la conversión de la web y entender mejor las ventas e impacto de los productos. De esta manera, se busca identificar las áreas de mejora y las oportunidades de crecimiento para la empresa.</p>    
+## Business Problem [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+<p align="justify"> The business problem for the online ecommerce company called "Osito Feliz" is that it needs to improve its sales and impact in the market. Despite having 4 very attractive stuffed toy models, the company has not been able to reach its full potential and is in a stagnant situation.
+To solve this problem, it has been decided to carry out a data analysis to measure website conversion and better understand product sales and impact. In this way, the aim is to identify areas for improvement and growth opportunities for the company.</p>    
  
 <a name="Objetivo2"></a>
-## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align="justify">El objetivo principal del análisis de datos es proporcionar información detallada sobre el rendimiento de la empresa y ofrecer recomendaciones para mejorar su posicionamiento en el mercado. Al trabajar en estrecha colaboración con el CEO, el director de marketing y el Gerente de la web, el equipo de análisis de datos buscará proporcionar información valiosa y detallada para impulsar la toma de decisiones estratégicas y ayudar a la empresa a alcanzar sus objetivos de crecimiento y rentabilidad.</p>  
+## Objective [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+<p align="justify">The main objective of the data analysis is to provide detailed information about the company's performance and offer recommendations to improve its positioning in the market. By working closely with the CEO, the marketing director, and the web manager, the data analysis team will seek to provide valuable and detailed insights to drive strategic decision-making and help the company achieve its growth and profitability goals.</p>  
 
 <a name="Diagrama2"></a>
-## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Diagram [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/231031630-6a5f79f0-ac96-449e-bcb2-cac37ca74b03.jpg" width= 60% height=60%></p>    
 
 <a name="Análisis-Previo2"></a>
-## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Preliminary Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Antes de comenzar a responder a las preguntas de negocio que se nos solicita debemos entender las tablas, como están compuestas y como se relacionan.  
 Puntos detectados:  
 
