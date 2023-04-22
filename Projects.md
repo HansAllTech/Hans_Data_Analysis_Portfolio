@@ -1,24 +1,24 @@
 ## Table of Content ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Proyectos.md#tabla-de-contenido-es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Projects.md#tabla-de-contenido))
-- [Proyectos](#Proyectos)
-  + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
-  + [Análisis de Rotación de Personal](#Proyecto2)
+- [Projects](#Proyectos)
+  + [Financial Analysis & Web Traffic - Happy Teddy Ecommerce](#Proyecto1)
+  + [Employee Turnover Analysis](#Proyecto2)
 <a name="Proyectos"></a>
-## Proyectos [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
-<p align="justify">En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.<br>  
-Los softwares utilizados en cada proyecto dependerán de los requisitos específicos del proyecto y los datos analizados. Puede incluir herramientas como Python para la limpieza y manipulación de datos, SQL para consultas y análisis de datos, Tableau o Power BI para visualización de datos.<br>  
-Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.</p>
+## Projects [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+<p align="justify">In this section, you will find a list of data analysis projects that I have worked on. For each project, I will provide a brief description of the problem and solution approach, along with a summary of the tools used to implement the solution.<br>  
+The software used in each project will depend on the specific requirements of the project and the data being analyzed. This may include tools such as Python for data cleaning and manipulation, SQL for querying and analyzing data, Tableau or Power BI for data visualization.<br>  
+By providing information on the technology used in each project, I hope to provide you with a better understanding of the different tools and technologies that can be used in data analysis projects and how they can be applied to solve real-world business problems.</p>
 
 <a name="Proyecto1"></a>
-## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
-<p align="justify">La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.<br>
-Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>  
+## 1. [Financial Analysis & Web Traffic - Happy Teddy Ecommerce](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+<p align="justify">The online ecommerce company "Osito Feliz" needs to improve its sales and market impact, despite having 4 attractive teddy bear models. To solve this problem, a data analysis will be carried out to measure website conversion and understand product sales and impact, identifying areas for improvement and growth opportunities. The goal is to provide detailed information and recommendations to improve its market positioning and achieve growth and profitability objectives, working in collaboration with the CEO, marketing director, and web manager.<br>
+Language and tools used in the project: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>  
   
-- [x] [`Ir al Proyecto`](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)
+- [x] [`Go to Project`](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md)
  
     
   
 <a name="Proyecto2"></a>
-## 2. Análisis de Rotación de Personal (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
-Lenguaje y herramientas utilizadas en el proyecto: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
+## 2. Employee Turnover Analysis (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+Language and tools used in the project: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
  
   
