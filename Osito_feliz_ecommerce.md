@@ -1,5 +1,5 @@
 <a name="Inicio"></a>    
-# Análisis de negocio para la Empresa Osito Feliz [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+# Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233751984-9b50e4fe-cefa-48b4-9592-cde79c28a794.png" width=30% height=30%></p>
 
 
