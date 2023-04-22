@@ -1,12 +1,12 @@
 <a name="Inicio"></a>    
-# Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+# Financial Analysis & Web Traffic - Osito Feliz E-commerce [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="center"><img src="https://user-images.githubusercontent.com/116538899/233751984-9b50e4fe-cefa-48b4-9592-cde79c28a794.png" width=30% height=30%></p>
 
 
 
 
 <a name="Tabla-de-contenido2"></a>
-## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Table of Contents [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
 - [Diagrama](#Diagrama2)
