@@ -9,7 +9,7 @@ The software used in each project will depend on the specific requirements of th
 By providing information on the technology used in each project, I hope to provide you with a better understanding of the different tools and technologies that can be used in data analysis projects and how they can be applied to solve real-world business problems.</p>
 
 <a name="Proyecto1"></a>
-## 1. [Financial Analysis & Web Traffic - Happy Teddy Ecommerce](https://github.com/HansAiTech/Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## 1. [Financial Analysis & Web Traffic - Happy Teddy Ecommerce](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Happy_Teddy_ecommerce.md#financial-analysis--web-traffic---osito-feliz-e-commerce---es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">The online ecommerce company "Osito Feliz" needs to improve its sales and market impact, despite having 4 attractive teddy bear models. To solve this problem, a data analysis will be carried out to measure website conversion and understand product sales and impact, identifying areas for improvement and growth opportunities. The goal is to provide detailed information and recommendations to improve its market positioning and achieve growth and profitability objectives, working in collaboration with the CEO, marketing director, and web manager.<br>
 Language and tools used in the project: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>  
   
