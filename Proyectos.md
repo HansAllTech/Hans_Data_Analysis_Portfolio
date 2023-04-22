@@ -1,4 +1,4 @@
-## Tabla de Contenido ([ES]([https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/edit/main/Proyectos.md)) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Happy_Teddy_ecommerce.md#financial-analysis--web-traffic---osito-feliz-e-commerce---es--en))
+## Tabla de Contenido ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Proyectos.md#tabla-de-contenido-es--en)) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Projects.md#tabla-de-contenido))
 - [Proyectos](#Proyectos)
   + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
   + [Análisis de Rotación de Personal](#Proyecto2)
