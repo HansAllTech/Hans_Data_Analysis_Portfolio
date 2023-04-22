@@ -1,3 +1,10 @@
+<a name="Inicio"></a>    
+## Análisis de negocio Empresa Osito Feliz [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233751984-9b50e4fe-cefa-48b4-9592-cde79c28a794.png" width=30% height=30%></p>
+
+
+
+
 <a name="Tabla-de-contenido2"></a>
 ## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 - [Problema de negocio](#Problema)
@@ -394,7 +401,8 @@ GROUP BY utm_source;
 ## Dashboard [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Visualización de un dashboard en looker
 [`Ir al Dashboard`](https://lookerstudio.google.com/reporting/8ac34c00-e322-494c-9817-211743495067/page/gEsMD?s=qrsI1gKtGYI)    
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233740491-068c6b28-41d6-44cf-9fb2-2dec49bdbc72.png"></p>    
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/233752456-920e9e8e-28a0-486f-991b-85cffcc86f06.png"></p>    
+
 
 
 <a name="Conclusiones2"></a>
