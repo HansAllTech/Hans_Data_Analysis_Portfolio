@@ -1,9 +1,9 @@
-## Tabla de Contenido
+## Tabla de Contenido ([ES]([https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/edit/main/Proyectos.md)) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Happy_Teddy_ecommerce.md#financial-analysis--web-traffic---osito-feliz-e-commerce---es--en))
 - [Proyectos](#Proyectos)
   + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
   + [Análisis de Rotación de Personal](#Proyecto2)
 <a name="Proyectos"></a>
-# Proyectos [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## Proyectos [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.<br>  
 Los softwares utilizados en cada proyecto dependerán de los requisitos específicos del proyecto y los datos analizados. Puede incluir herramientas como Python para la limpieza y manipulación de datos, SQL para consultas y análisis de datos, Tableau o Power BI para visualización de datos.<br>  
 Al proporcionar información sobre tecnología utilizada en cada proyecto, espero brindarle una mejor comprensión de las diferentes herramientas y tecnologías que se pueden utilizar en proyectos de análisis de datos y cómo se pueden aplicar para resolver problemas comerciales del mundo real.</p>
