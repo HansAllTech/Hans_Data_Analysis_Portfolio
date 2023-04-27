@@ -400,9 +400,7 @@ GROUP BY utm_source;
 ## Dashboard [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Visualización en looker
 [`Ir al Dashboard`](https://lookerstudio.google.com/reporting/8ac34c00-e322-494c-9817-211743495067/page/gEsMD?s=qrsI1gKtGYI)    
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/234737221-7552c417-9d9f-47a9-be1d-a1fab0616d3a.png"></p>    
-
-
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/234737461-4d145653-4eb6-47b8-85a8-c22709751195.jpg"></p>    
 
 <a name="Conclusiones2"></a>
 ## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
