@@ -17,3 +17,12 @@
   <source src="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif" alt="Texto alternativo" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+
+[![Preview Image](image_preview.jpg)](https://www.example.com/animated.gif)
+
+
+![E-Learning logo]()
+
+
+[![Preview Image](https://user-images.githubusercontent.com/116538899/235405377-5df703f5-c2e8-4cd3-bce2-4ecb7aa463f6.png)](https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif)
