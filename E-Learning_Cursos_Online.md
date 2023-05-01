@@ -36,5 +36,14 @@
 </details>
 
 
-
 ![GIF Animado](https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif){: width="400" height="300" autoplay loop}
+
+
+<a href="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif">
+  <img src="https://user-images.githubusercontent.com/116538899/235405377-5df703f5-c2e8-4cd3-bce2-4ecb7aa463f6.png" alt="Imagen previa del gif">
+</a>
+
+<video autoplay loop muted>
+  <source src="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif" type="video/mp4">
+</video>
+
