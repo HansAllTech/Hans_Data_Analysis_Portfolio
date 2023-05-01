@@ -13,6 +13,7 @@
 <img src="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif" alt="Texto alternativo" autoplay loop>
 
 
-<video width="320" height="240" autoplay>
-  <source src="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif" type="video/mp4">
+<video width="320" height="240" controls autoplay>
+  <source src="https://github.com/HansAllTech/Training_Space/blob/main/E-Learning%20logo.gif" alt="Texto alternativo" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
