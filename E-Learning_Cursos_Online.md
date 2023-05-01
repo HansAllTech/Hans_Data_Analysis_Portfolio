@@ -10,4 +10,4 @@
 ![E-Learning logo](https://user-images.githubusercontent.com/116538899/235403643-5479563b-5ab9-4d79-b489-c0a819b62f33.gif)
 
 
-<img src="https://user-images.githubusercontent.com/116538899/235403643-5479563b-5ab9-4d79-b489-c0a819b62f33.gif" alt="Texto alternativo" autoplay>
+<img src="https://user-images.githubusercontent.com/116538899/235403643-5479563b-5ab9-4d79-b489-c0a819b62f33.gif" alt="Texto alternativo" autoplay loop>
