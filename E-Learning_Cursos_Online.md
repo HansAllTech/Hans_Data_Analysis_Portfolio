@@ -10,7 +10,8 @@
 - [Problema de negocio](#Problema)
 - [Objetivo](#Objetivo2)
 - [Diagrama](#Diagrama2)
-- [Análisis Previo](#Análisis-Previo2)   
+- [Análisis Previo](#Análisis-Previo2)
+- [Ejecución](#Ejecución2)   
 - [Análisis de Ventas](#Análisis-de-Ventas2)
 - [Análisis de Tráfico Web](#Análisis-de-Tráfico-Web2)
 - [Análisis Avanzado](#Análisis-Avanzado2)
@@ -45,4 +46,35 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
    <p align='justify'>Tenemos datos de los productos osea cursos que se venden, los clientes, de los pedidos y de los pagos recibidos por stripe.</p>
 4. Modelo de datos    
    <p align='justify'>Tenemos la tabla de pedidos que se relaciona con la de clientes y productos mediante SKU_producto e id_cliente y por otro lado tenemos la tabla      la de pagos de stripe que la relacionaremos con la de pedidos por el numero de pedido.</p><br>   
-5. Análisis exploratorio de las tablas.
+5. Análisis exploratorio de las tablas.  
+
+<a name="Ejecución2"></a>    
+## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+1. Crear una nueva base de datos en MYSQL llamada “learndata” + tablas:
+    1.1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
+2. Crear la tabla de productos a partir de los datos en crudo.
+    1. Chequear como vienen los datos
+    2. Cambiar los nombres de los campos
+    3. Insertar los campos a la nueva tabla 
+3. Crear la tabla de clientes a partir de los datos en crudo
+    1. Chequear como vienen los datos
+    2. Cambiar los nombres de los campos
+    3. Convertir el campo date_created que viene como timestamp a solo fecha
+    4. Extraer del campo billing, todos los descriptivos del cliente que necesitamos aprendiendo a parsear un JSON. 
+    5. Insertar los campos a la nueva tabla 
+4. Crear la tabla de pedidos a partir de los datos en crudo
+    1. Chequear como vienen los datos
+    2. Cambiar los nombres de los campos
+    3. Sustituir el nombre del producto por el id.
+    4. Normalizar la columna método de pago.
+    5. Convertir a date la columna fecha_pedido
+    6. Redondear decimales de la columna coste_articulo a enteros
+    7. Insertamos los pedidos a la tabla
+5. Crear la tabla de cobros de stripe a partir de los datos en crudo
+    1. Chequear como vienen los datos
+    2. Cambiar los nombres de los campos
+    3. Obtener el número de pedido con la función RIGHT. Quitar el numero de pedido de la descripción que es lo que nos va a permitir unir esta tabla con otras
+    4. Pasar a timestamp el campo “created”
+    5. Reemplazar las commas por puntos
+    6. Convertir el número a decimal con dos lugares despues de la comma.
+    7. Insertar tabla en nueva
