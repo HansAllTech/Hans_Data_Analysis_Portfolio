@@ -54,8 +54,10 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
     1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
 
 ```sql
+# Creación de base de datos
 CREATE SCHEMA learndata;
 
+# Creación de Tabla dim_clientes
 CREATE TABLE dim_clientes (
 	id_cliente INT,
     fecha_creacion_cliente DATE,
@@ -70,6 +72,49 @@ CREATE TABLE dim_clientes (
     PRIMARY KEY (id_cliente)
     );
     
+# Creación de Tabla dim_product
+CREATE TABLE dim_producto (
+    id_producto INT,
+    sku_producto INT,
+    nombre_producto VARCHAR(200),
+    publicado_producto BOOLEAN,
+    inventario_producto VARCHAR(100),
+    precio_normal_producto INT,
+    categoria_producto VARCHAR(100),
+    PRIMARY KEY (sku_producto)
+    );
+
+# Creación de Tabla fac_pedidos
+CREATE TABLE fac_pedidos (
+	id_pedido INT,
+    sku_producto INT,
+    estado_pedido VARCHAR(50),
+	fecha_pedido DATE,
+    id_cliente INT,
+    tipo_pago_pedido VARCHAR(50),
+    coto_pedido INT,
+    importe_de_descuento_pedido DECIMAL(10,0),
+    importe_total_pedido INT,
+    cantidad_pedido INT,
+    codigo_cupon_pedido VARCHAR(100),
+    PRIMARY KEY (id_pedido),
+    FOREIGN KEY (id_cliente) REFERENCES dim_clientes (id_cliente),
+    FOREIGN KEY (sku_producto) REFERENCES dim_producto (sku_producto)
+    );
+    
+# Creación de Tabla fac_pagos_stripe
+CREATE TABLE fac_pagos_stripe (
+	id_pago INT,
+	fecha_pago DATETIME(6),
+    id_pedido INT,
+    importe_pago INT,
+    moneda_pago VARCHAR(5),
+    comision_pago DECIMAL(10,2),
+    neto_pago DECIMAL(10,2),
+    tipo_pago VARCHAR(50),
+    PRIMARY KEY (id_pago),
+    FOREIGN KEY (id_pedido) REFERENCES fac_pedidos (id_pedido)
+    ) 
 ```
    
 2. Crear la tabla de productos a partir de los datos en crudo.
