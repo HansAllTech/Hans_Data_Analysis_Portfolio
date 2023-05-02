@@ -38,9 +38,9 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 1. ¿Que fuentes de datos tiene la empresa?
-   - <p align='justify'>La empresa utiliza wordpress con un plugin de wocommerce como plataforma de venta de sus cursos online y luego cuenta con stripe como pasarela de pagos a de más de los pagos de tarjeta de crédito.</p><br>    
+   - <p align='justify'>La empresa utiliza wordpress con un plugin de wocommerce como plataforma de venta de sus cursos online y luego cuenta con stripe como pasarela de pagos a de más de los pagos de tarjeta de crédito.</p>
 2. ¿En que formato se descargan los datos?  
-   - Los datos crudos los tendremos en csv directamente descargados de las fuentes.<br>
+   -<p>Los datos crudos los tendremos en csv directamente descargados de las fuentes.</p>
 3. ¿Que datos tenemos?  
    - Tenemos datos de los productos osea cursos que se venden, los clientes, de los pedidos y de los pagos recibidos por stripe.<br>
 4. Modelo de datos  
