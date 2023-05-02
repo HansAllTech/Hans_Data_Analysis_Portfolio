@@ -48,6 +48,16 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
    <p align='justify'>Tenemos la tabla de pedidos que se relaciona con la de clientes y productos mediante SKU_producto e id_cliente y por otro lado tenemos la tabla      la de pagos de stripe que la relacionaremos con la de pedidos por el numero de pedido.</p><br>   
 5. Análisis exploratorio de las tablas.  
 
+**Analizando tablas en crudo**  
+_Tabla raw_productos_wocommerce_  
+```sql
+SELECT * FROM learndata_crudo.raw_productos_wocommerce;
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235800904-2d0afb4d-8c31-4586-9ecf-fe50f5564ba2.png">
+</p>    
+
+
 <a name="Ejecución2"></a>    
 ## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 1. Crear una nueva base de datos en MYSQL llamada “learndata” + tablas:
