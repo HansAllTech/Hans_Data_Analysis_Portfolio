@@ -170,7 +170,6 @@ CREATE TABLE fac_pagos_stripe (
 
 ```sql
 INSERT INTO learndata.dim_producto
-
 SELECT
 id AS id_producto,
 sku AS sku_producto,
@@ -193,7 +192,29 @@ FROM learndata_crudo.raw_productos_wocommerce;
     2. Cambiar los nombres de los campos
     3. Convertir el campo date_created que viene como timestamp a solo fecha
     4. Extraer del campo billing, todos los descriptivos del cliente que necesitamos aprendiendo a parsear un JSON. 
-    5. Insertar los campos a la nueva tabla 
+    5. Insertar los campos a la nueva tabla   
+
+```sql
+INSERT INTO learndata.dim_producto
+SELECT 
+id AS id_cliente,
+date_created AS fecha_creacion_cliente,
+JSON_VALUE(billing,'$[0].first_name') AS nombre_cliente, 
+JSON_VALUE(billing,'$[0].last_name') AS apellido_cliente,
+JSON_VALUE(billing,'$[0].email') AS email_cliente,
+JSON_VALUE(billing,'$[0].phone') AS telefono_cliente,
+JSON_VALUE(billing,'$[0].Region') AS region_cliente,
+JSON_VALUE(billing,'$[0].country') AS pais_cliente,
+JSON_VALUE(billing,'$[0].postcode') AS codigo_postal_cliente,
+JSON_VALUE(billing,'$[0].address_1') AS direccion_cliente
+FROM learndata_crudo.raw_clientes_wocommerce;
+```  
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235809344-4feb0b46-a0cb-4873-b091-9b43d1d6691e.png">
+</p>    
+
+
 4. Crear la tabla de pedidos a partir de los datos en crudo
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
