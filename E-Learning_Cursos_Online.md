@@ -51,7 +51,7 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
 <a name="Ejecución2"></a>    
 ## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 1. Crear una nueva base de datos en MYSQL llamada “learndata” + tablas:
-    1.1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
+    1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
 2. Crear la tabla de productos a partir de los datos en crudo.
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
