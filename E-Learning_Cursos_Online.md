@@ -117,13 +117,37 @@ CREATE TABLE fac_pagos_stripe (
     ) 
 ```
 **Nuevo Diagrama**  
-<p align="center"><img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%></p>    
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%>
+</p>    
 
  
 2. Crear la tabla de productos a partir de los datos en crudo.
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
-    3. Insertar los campos a la nueva tabla 
+    3. Insertar los campos a la nueva tabla  
+
+
+```sql
+INSERT INTO learndata.dim_producto
+
+SELECT
+id AS id_producto,
+sku AS sku_producto,
+nombre AS nombre_producto, 
+publicado AS publicado_producto,
+inventario AS inventario_producto,
+precio_normal AS precio_normal_producto,
+categorias AS categoria_producto
+FROM learndata_crudo.raw_productos_wocommerce;
+```  
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235800584-99aaefbe-74fe-4ed8-b4fe-c845153d8236.png">
+</p>    
+
+
+
 3. Crear la tabla de clientes a partir de los datos en crudo
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
