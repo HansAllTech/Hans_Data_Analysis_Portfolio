@@ -49,12 +49,41 @@ Realizar una limpieza de datos para asegurar que los datos en crudo relacionados
 5. Análisis exploratorio de las tablas.  
 
 **Analizando tablas en crudo**  
-_Tabla raw_productos_wocommerce_  
+
+- _Tabla raw_productos_wocommerce_
+   
 ```sql
 SELECT * FROM learndata_crudo.raw_productos_wocommerce;
 ```  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/235800904-2d0afb4d-8c31-4586-9ecf-fe50f5564ba2.png">
+</p>  
+
+- _Tabla raw_clientes_wocommerce_
+   
+```sql
+SELECT * FROM learndata_crudo.raw_clientes_wocommerce;	
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235801625-babcec77-b88a-48b0-9a05-5fb1407a2b2e.png">
+</p>  
+
+- _Tabla raw_clientes_wocommerce_
+   
+```sql
+SELECT * FROM learndata_crudo.raw_pagos_stripe;	
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235801722-45eceaad-da39-4341-b013-dd0ae6fe5793.png">
+</p>   
+
+- _Tabla raw_pedidos_wocommerce_
+   
+```sql
+SELECT * FROM learndata_crudo.raw_pedidos_wocommerce;;	
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235801953-7c78dfa1-5b5e-4e44-a406-f1bc255a0105.png">
 </p>    
 
 
@@ -69,7 +98,7 @@ CREATE SCHEMA learndata;
 
 # Creación de Tabla dim_clientes
 CREATE TABLE dim_clientes (
-	id_cliente INT,
+    id_cliente INT,
     fecha_creacion_cliente DATE,
     nombre_cliente VARCHAR(100),
     apellido_cliente VARCHAR(100),
@@ -96,10 +125,10 @@ CREATE TABLE dim_producto (
 
 # Creación de Tabla fac_pedidos
 CREATE TABLE fac_pedidos (
-	id_pedido INT,
+    id_pedido INT,
     sku_producto INT,
     estado_pedido VARCHAR(50),
-	fecha_pedido DATE,
+    fecha_pedido DATE,
     id_cliente INT,
     tipo_pago_pedido VARCHAR(50),
     coto_pedido INT,
@@ -114,8 +143,8 @@ CREATE TABLE fac_pedidos (
     
 # Creación de Tabla fac_pagos_stripe
 CREATE TABLE fac_pagos_stripe (
-	id_pago INT,
-	fecha_pago DATETIME(6),
+    id_pago INT,
+    fecha_pago DATETIME(6),
     id_pedido INT,
     importe_pago INT,
     moneda_pago VARCHAR(5),
