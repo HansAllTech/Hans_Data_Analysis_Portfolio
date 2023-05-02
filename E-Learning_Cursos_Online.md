@@ -1,5 +1,5 @@
 <a name="Inicio"></a>    
-# Limpieza de datos - E-Learning Cursos Online [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES]() | [EN]())
+# Limpieza de datos - E-Learning Cursos Online [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/edit/main/E-Learning_Cursos_Online.md) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/edit/main/E-Learning_Cursos_Online.md))
   
 <p align = 'center'><img src="https://user-images.githubusercontent.com/116538899/235765262-8acfe1d1-a637-4ef7-adeb-b1880368c671.jpg" width ="25%"></p>
   
