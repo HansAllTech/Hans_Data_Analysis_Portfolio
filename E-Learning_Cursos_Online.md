@@ -21,7 +21,7 @@
 
 <a name="Problema"></a>    
 ## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-<p align='justity'>
+<p align='justify'>
 El problema de negocio de LearnData es que actualmente no tiene un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras. Sin contar con un sistema eficaz, la empresa no puede identificar las áreas que necesitan mejoras o tomar decisiones informadas que impulsen el crecimiento de la empresa. Además, sin un proceso de captura de datos adecuado, los datos en crudo generados por la web del negocio podrían estar incompletos, ser inexactos o contener duplicados, lo que dificultaría aún más el análisis y la toma de decisiones.
 <br>
 Por lo tanto, se necesita realizar una limpieza de datos para asegurar que los datos en crudo estén completos, sean precisos y no contengan duplicados, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada. Además, la empresa debe invertir en el desarrollo e implementación de un sistema que pueda capturar y analizar los datos financieros de manera eficiente y efectiva para que la empresa pueda tomar decisiones informadas y basadas en datos para mejorar su rendimiento financiero.
