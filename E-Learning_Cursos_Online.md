@@ -116,7 +116,10 @@ CREATE TABLE fac_pagos_stripe (
     FOREIGN KEY (id_pedido) REFERENCES fac_pedidos (id_pedido)
     ) 
 ```
-   
+**Nuevo Diagrama**  
+<p align="center"><img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%></p>    
+
+ 
 2. Crear la tabla de productos a partir de los datos en crudo.
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
