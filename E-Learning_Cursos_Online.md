@@ -328,10 +328,9 @@ FROM learndata_crudo.raw_pagos_stripe;
 ```  
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/236002259-5efdd35d-67e7-4745-8270-b9d426a10709.png">
-</p>  
-
-<p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/236005853-7ecbc34b-8cff-463c-bcb6-23e5f04b6d42.png">
 </p>    
-
+  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/236006162-97a54338-2448-4c08-aada-3a6323af2bb8.png">
+</p>  
