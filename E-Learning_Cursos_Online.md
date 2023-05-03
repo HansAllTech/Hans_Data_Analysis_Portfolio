@@ -299,7 +299,7 @@ LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_arti
 
 Nota:  
 ```sql  
-# En caso de no poder insertar valores por el formato date usar
+# En caso de no poder insertar valores por el formato date, usar la siguiente configuración antes de insert.
 SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
 ```  
 
