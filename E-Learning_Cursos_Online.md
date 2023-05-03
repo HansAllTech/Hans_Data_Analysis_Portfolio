@@ -297,7 +297,12 @@ LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_arti
 <img src="https://user-images.githubusercontent.com/116538899/235990366-400885b1-03c5-4bcd-9ae8-884a7fe9478e.png">
 </p>  
 
-    
+Nota:  
+```sql  
+# En caso de no poder insertar valores por el formato date usar
+SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
+```  
+
 5. Crear la tabla de cobros de stripe a partir de los datos en crudo
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
