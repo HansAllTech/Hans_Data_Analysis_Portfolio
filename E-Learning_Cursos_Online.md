@@ -310,4 +310,24 @@ SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
     4. Pasar a timestamp el campo “created”
     5. Reemplazar las commas por puntos
     6. Convertir el número a decimal con dos lugares despues de la comma.
-    7. Insertar tabla en nueva
+    7. Insertar tabla en nueva  
+
+**Inserción de valores a tabla fac_pedidos**   
+```sql
+SELECT
+id AS id_pago,
+TIMESTAMP(created) AS fecha_pago,
+RIGHT(description,5) AS id_pedido,
+amount AS importe_pago,
+currency AS moneda_pago,
+CAST(REPLACE (fee,',','.') AS DECIMAL(10,2))AS comision_pago,
+CAST(REPLACE (net,',','.') AS DECIMAL (10,2)) AS neto_pago,
+type AS tipo_pago
+FROM learndata_crudo.raw_pagos_stripe;
+```  
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/236002259-5efdd35d-67e7-4745-8270-b9d426a10709.png">
+</p>    
+
+
