@@ -195,10 +195,10 @@ FROM learndata_crudo.raw_productos_wocommerce;
     5. Insertar los campos a la nueva tabla   
 
 ```sql
-INSERT INTO learndata.dim_producto
+INSERT INTO learndata.dim_clientes
 SELECT 
 id AS id_cliente,
-date_created AS fecha_creacion_cliente,
+STR_TO_DATE(date_created, '%d/%m/%Y %H:%i:%s' ) AS fecha_creacion_cliente,
 JSON_VALUE(billing,'$[0].first_name') AS nombre_cliente, 
 JSON_VALUE(billing,'$[0].last_name') AS apellido_cliente,
 JSON_VALUE(billing,'$[0].email') AS email_cliente,
