@@ -226,19 +226,21 @@ FROM learndata_crudo.raw_clientes_wocommerce;
     
  
 ```sql
-INSERT INTO learndata.dim_clientes
-SELECT 
-id AS id_cliente,
-STR_TO_DATE(date_created, '%d/%m/%Y %H:%i:%s' ) AS fecha_creacion_cliente,
-JSON_VALUE(billing,'$[0].first_name') AS nombre_cliente, 
-JSON_VALUE(billing,'$[0].last_name') AS apellido_cliente,
-JSON_VALUE(billing,'$[0].email') AS email_cliente,
-JSON_VALUE(billing,'$[0].phone') AS telefono_cliente,
-JSON_VALUE(billing,'$[0].Region') AS region_cliente,
-JSON_VALUE(billing,'$[0].country') AS pais_cliente,
-JSON_VALUE(billing,'$[0].postcode') AS codigo_postal_cliente,
-JSON_VALUE(billing,'$[0].address_1') AS direccion_cliente
-FROM learndata_crudo.raw_clientes_wocommerce;
+INSERT INTO learndata.fac_pedidos
+SELECT
+numero_de_pedido AS id_pedido,
+CASE WHEN dp.sku_producto IS NULL THEN 3 ELSE dp.sku_producto END AS sku_producto,
+estado_de_pedido AS estado_pedido,
+DATE(fecha_de_pedido) AS fecha_pedido,
+`id cliente` AS id_cliente,
+CASE WHEN titulo_metodo_de_pago LIKE '%Stripe%' THEN 'Stripe' ELSE 'Tarjeta' END AS tipo_pago_pedido,
+coste_articulo AS costo_pedido,
+importe_de_descuento_del_carrito AS importe_de_descuento_pedido,
+importe_total_pedido AS importe_total_pedido,
+cantidad AS cantidad_pedido,
+cupon_articulo AS codigo_cupon_pedido
+FROM learndata_crudo.raw_pedidos_wocommerce rpe
+LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_articulo;
 ```  
 
 <p align="center">
