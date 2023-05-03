@@ -12,12 +12,6 @@
 - [Diagrama](#Diagrama2)
 - [Análisis Previo](#Análisis-Previo2)
 - [Ejecución](#Ejecución2)   
-- [Análisis de Ventas](#Análisis-de-Ventas2)
-- [Análisis de Tráfico Web](#Análisis-de-Tráfico-Web2)
-- [Análisis Avanzado](#Análisis-Avanzado2)
-- [Dashboard](#Visualización-en-Looker2)   
-- [Conclusiones](#Conclusiones2) 
-- [Recomendaciones](#Recomendaciones2)   
 
 
 <a name="Problema"></a>    
