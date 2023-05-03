@@ -223,8 +223,54 @@ FROM learndata_crudo.raw_clientes_wocommerce;
     5. Convertir a date la columna fecha_pedido
     6. Redondear decimales de la columna coste_articulo a enteros
     7. Insertamos los pedidos a la tabla
-    
- 
+
+```sql
+# Sku errores
+SELECT
+DISTINCT sku
+FROM learndata_crudo.raw_pedidos_wocommerce;
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235987844-4958b12c-2299-459f-8bdb-02afe4ab2b31.png">
+</p>    
+
+
+```sql
+# Diferentes tipos de pago
+SELECT
+DISTINCT titulo_metodo_de_pago
+FROM learndata_crudo.raw_pedidos_wocommerce;
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235988179-dbeb3595-81c4-4c00-a589-3338ff95632c.png">
+</p>  
+
+
+```sql
+# Error de doble numero de pedido
+SELECT 
+* 
+FROM learndata_crudo.raw_pedidos_wocommerce
+WHERE numero_de_pedido = '41624';
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235988377-614255cb-ed68-4dd7-8933-d3fbd55332f6.png">
+</p>  
+
+
+```sql
+# Eliminamos el duplicado
+DELETE
+FROM learndata_crudo.raw_pedidos_wocommerce
+WHERE numero_de_pedido = '41624' AND `id cliente` = '1324';
+```  
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235988887-71d33256-e2ef-4965-ae93-8eb5469f5eb0.png">
+</p>   
+
+
+
+**Inserción de valores a tabla fac_pedidos**   
 ```sql
 INSERT INTO learndata.fac_pedidos
 SELECT
@@ -247,7 +293,10 @@ LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_arti
 <img src="https://user-images.githubusercontent.com/116538899/235835155-f07199cb-75b7-45e3-911b-f075b72c8ca1.png">
 </p>    
 
-    
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235990366-400885b1-03c5-4bcd-9ae8-884a7fe9478e.png">
+</p>  
+
     
 5. Crear la tabla de cobros de stripe a partir de los datos en crudo
     1. Chequear como vienen los datos
