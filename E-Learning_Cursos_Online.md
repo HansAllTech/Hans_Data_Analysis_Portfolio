@@ -167,7 +167,7 @@ CREATE TABLE fac_pagos_stripe (
     2. Cambiar los nombres de los campos
     3. Insertar los campos a la nueva tabla  
 
-
+**Inserción de valores a tabla dim_producto**     
 ```sql
 INSERT INTO learndata.dim_producto
 SELECT
@@ -194,6 +194,7 @@ FROM learndata_crudo.raw_productos_wocommerce;
     4. Extraer del campo billing, todos los descriptivos del cliente que necesitamos aprendiendo a parsear un JSON. 
     5. Insertar los campos a la nueva tabla   
 
+**Inserción de valores a tabla dim_clientes**     
 ```sql
 INSERT INTO learndata.dim_clientes
 SELECT 
