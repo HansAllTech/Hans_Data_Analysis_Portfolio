@@ -223,6 +223,30 @@ FROM learndata_crudo.raw_clientes_wocommerce;
     5. Convertir a date la columna fecha_pedido
     6. Redondear decimales de la columna coste_articulo a enteros
     7. Insertamos los pedidos a la tabla
+    
+ 
+```sql
+INSERT INTO learndata.dim_clientes
+SELECT 
+id AS id_cliente,
+STR_TO_DATE(date_created, '%d/%m/%Y %H:%i:%s' ) AS fecha_creacion_cliente,
+JSON_VALUE(billing,'$[0].first_name') AS nombre_cliente, 
+JSON_VALUE(billing,'$[0].last_name') AS apellido_cliente,
+JSON_VALUE(billing,'$[0].email') AS email_cliente,
+JSON_VALUE(billing,'$[0].phone') AS telefono_cliente,
+JSON_VALUE(billing,'$[0].Region') AS region_cliente,
+JSON_VALUE(billing,'$[0].country') AS pais_cliente,
+JSON_VALUE(billing,'$[0].postcode') AS codigo_postal_cliente,
+JSON_VALUE(billing,'$[0].address_1') AS direccion_cliente
+FROM learndata_crudo.raw_clientes_wocommerce;
+```  
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/116538899/235835155-f07199cb-75b7-45e3-911b-f075b72c8ca1.png">
+</p>    
+
+    
+    
 5. Crear la tabla de cobros de stripe a partir de los datos en crudo
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
