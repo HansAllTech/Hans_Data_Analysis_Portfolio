@@ -53,18 +53,18 @@ Uses the following tools to manage their business:
  
  
 <a name="Análisis-Previo2"></a>
-## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-1. ¿Que fuentes de datos tiene la empresa?
-   <p align='justify'>La empresa utiliza wordpress con un plugin de wocommerce como plataforma de venta de sus cursos online y luego cuenta con stripe como pasarela de pagos a de más de los pagos de tarjeta de crédito.</p>
-2. ¿En que formato se descargan los datos?    
-   <p align='justify'> Los datos crudos los tendremos en csv directamente descargados de las fuentes.</p>
-3. ¿Que datos tenemos?    
-   <p align='justify'>Tenemos datos de los productos osea cursos que se venden, los clientes, de los pedidos y de los pagos recibidos por stripe.</p>
-4. Modelo de datos    
-   <p align='justify'>Tenemos la tabla de pedidos que se relaciona con la de clientes y productos mediante SKU_producto e id_cliente y por otro lado tenemos la tabla      la de pagos de stripe que la relacionaremos con la de pedidos por el numero de pedido.</p><br>   
-5. Análisis exploratorio de las tablas.  
+## Preliminary Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+1. What data sources does the company have?
+   <p align='justify'>The company uses WordPress with a WooCommerce plugin as a platform to sell its online courses, and then it has Stripe as a payment gateway in addition to credit card payments.</p>
+2. In what format are the data downloaded?   
+   <p align='justify'> We will have the raw data in CSV format directly downloaded from the sources.</p>
+3. What data do we have   
+   <p align='justify'>We have data on the products, meaning the courses that are sold, the customers, the orders, and the payments received through Stripe.</p>
+4. Data model
+   <p align='justify'>We have the orders table which relates to the customers and products table through SKU_product and customer_id, and on the other hand, we have the Stripe payments table which we will relate to the orders table by the order number.</p><br>   
+5. Exploratory analysis of the tables.  
 
-**Analizando tablas en crudo**  
+**Analyzing raw tables**  
 
 - _Tabla raw_productos_wocommerce_
    
@@ -104,15 +104,15 @@ SELECT * FROM learndata_crudo.raw_pedidos_wocommerce;;
 
 
 <a name="Ejecución2"></a>    
-## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-1. Crear una nueva base de datos en MYSQL llamada “learndata” + tablas:
+## Execution [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+1. Create a new MYSQL database called "learndata" + tables:
     1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
 
 ```sql
-# Creación de base de datos
+# Creating a database
 CREATE SCHEMA learndata;
 
-# Creación de Tabla dim_clientes
+# Creation of dim_clientes table
 CREATE TABLE dim_clientes (
     id_cliente INT,
     fecha_creacion_cliente DATE,
@@ -127,7 +127,7 @@ CREATE TABLE dim_clientes (
     PRIMARY KEY (id_cliente)
     );
     
-# Creación de Tabla dim_product
+# Creation of dim_product table
 CREATE TABLE dim_producto (
     id_producto INT,
     sku_producto INT,
@@ -139,7 +139,7 @@ CREATE TABLE dim_producto (
     PRIMARY KEY (sku_producto)
     );
 
-# Creación de Tabla fac_pedidos
+# Creation of fac_pedidos table
 CREATE TABLE fac_pedidos (
     id_pedido INT,
     sku_producto INT,
@@ -157,7 +157,7 @@ CREATE TABLE fac_pedidos (
     FOREIGN KEY (sku_producto) REFERENCES dim_producto (sku_producto)
     );
     
-# Creación de Tabla fac_pagos_stripe
+# Creation of fac_pagos_stripe table
 CREATE TABLE fac_pagos_stripe (
     id_pago INT,
     fecha_pago DATETIME(6),
@@ -171,18 +171,18 @@ CREATE TABLE fac_pagos_stripe (
     FOREIGN KEY (id_pedido) REFERENCES fac_pedidos (id_pedido)
     ) 
 ```
-**Nuevo Diagrama**  
+**New Diagram**  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%>
 </p>    
 
  
-2. Crear la tabla de productos a partir de los datos en crudo.
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Insertar los campos a la nueva tabla  
+2. Create the products table from the raw data.
+    1. Check how the data comes
+    2. Rename the field names
+    3. Insert the fields into the new table
 
-**Inserción de valores a tabla dim_producto**     
+**Inserting values into dim_product table.**     
 ```sql
 INSERT INTO learndata.dim_producto
 SELECT
@@ -202,14 +202,14 @@ FROM learndata_crudo.raw_productos_wocommerce;
 
 
 
-3. Crear la tabla de clientes a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Convertir el campo date_created que viene como timestamp a solo fecha
-    4. Extraer del campo billing, todos los descriptivos del cliente que necesitamos aprendiendo a parsear un JSON. 
-    5. Insertar los campos a la nueva tabla   
+3. Create the customers table from the raw data:
+    1. Check how the data comes
+    2. Rename the field names
+    3. Convert the date_created field, which comes as a timestamp, to date only
+    4. Extract from the billing field all the customer descriptors we need by learning to parse a JSON. 
+    5. Insert the fields into the new table  
 
-**Inserción de valores a tabla dim_clientes**     
+**Inserting values into dim_clientes table**     
 ```sql
 INSERT INTO learndata.dim_clientes
 SELECT 
@@ -231,17 +231,19 @@ FROM learndata_crudo.raw_clientes_wocommerce;
 </p>    
 
 
-4. Crear la tabla de pedidos a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Sustituir el nombre del producto por el id.
-    4. Normalizar la columna método de pago.
-    5. Convertir a date la columna fecha_pedido
-    6. Redondear decimales de la columna coste_articulo a enteros
-    7. Insertamos los pedidos a la tabla
+4. Create the orders table from raw data
+    1. Check how the data comes
+    2. Rename the fields
+    3. Substitute the product name by its ID
+    4. Normalize the payment method column
+    5. Convert the order date column to date format
+    6. Round the decimals of the item cost column to integers
+    7. Insert the orders into the table.
+  
+
 
 ```sql
-# Sku errores
+# Sku errors
 SELECT
 DISTINCT sku
 FROM learndata_crudo.raw_pedidos_wocommerce;
@@ -252,7 +254,7 @@ FROM learndata_crudo.raw_pedidos_wocommerce;
 
 
 ```sql
-# Diferentes tipos de pago
+# Different payment methods.
 SELECT
 DISTINCT titulo_metodo_de_pago
 FROM learndata_crudo.raw_pedidos_wocommerce;
@@ -263,7 +265,7 @@ FROM learndata_crudo.raw_pedidos_wocommerce;
 
 
 ```sql
-# Error de doble numero de pedido
+# Double order number error
 SELECT 
 * 
 FROM learndata_crudo.raw_pedidos_wocommerce
@@ -275,7 +277,7 @@ WHERE numero_de_pedido = '41624';
 
 
 ```sql
-# Eliminamos el duplicado
+# We remove the duplicate
 DELETE
 FROM learndata_crudo.raw_pedidos_wocommerce
 WHERE numero_de_pedido = '41624' AND `id cliente` = '1324';
@@ -286,7 +288,7 @@ WHERE numero_de_pedido = '41624' AND `id cliente` = '1324';
 
 
 
-**Inserción de valores a tabla fac_pedidos**   
+**Inserting values into fac_orders table**   
 ```sql
 INSERT INTO learndata.fac_pedidos
 SELECT
@@ -313,22 +315,22 @@ LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_arti
 <img src="https://user-images.githubusercontent.com/116538899/235990366-400885b1-03c5-4bcd-9ae8-884a7fe9478e.png">
 </p>  
 
-Nota:  
+Note:  
 ```sql  
-# En caso de no poder insertar valores por el formato date, usar la siguiente configuración antes de insert.
+# If you are unable to insert values due to date format, use the following configuration before inserting.
 SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
 ```  
+  
+5. Create the stripe payments table from the raw data:
+    1. Check how the data is structured.
+    2. Rename the columns as needed.
+    3. Get the order number using the RIGHT function. Remove the order number from the description, as this will allow us to join this table with others.
+    4. Convert the "created" field to a timestamp.
+    5. Replace commas with dots.
+    6. Convert the number to a decimal with two decimal places.
+    7. Insert the table into the new database.      
 
-5. Crear la tabla de cobros de stripe a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Obtener el número de pedido con la función RIGHT. Quitar el numero de pedido de la descripción que es lo que nos va a permitir unir esta tabla con otras
-    4. Pasar a timestamp el campo “created”
-    5. Reemplazar las commas por puntos
-    6. Convertir el número a decimal con dos lugares despues de la comma.
-    7. Insertar tabla en nueva  
-
-**Inserción de valores a tabla fac_pedidos**   
+**Inserting values into fac_pedidos table**   
 ```sql
 SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
 INSERT INTO learndata.fac_pagos_stripe (fecha_pago,id_pedido,importe_pago,moneda_pago,comision_pago,neto_pago,tipo_pago)
