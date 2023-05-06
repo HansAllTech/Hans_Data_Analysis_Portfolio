@@ -1,7 +1,9 @@
 ## Tabla de Contenido ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Proyectos.md#tabla-de-contenido-es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Projects.md#table-of-content-es--en))
 - [Proyectos](#Proyectos)
   + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
-  + [Análisis de Rotación de Personal](#Proyecto2)
+  + [Limpieza de datos - E-Learning Cursos Online](#Proyecto2)
+  + [Análisis de Rotación de Personal](#Proyectoz)
+  
 <a name="Proyectos"></a>
 ## Proyectos [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">En esta sección, encontrará una lista de proyectos de análisis de datos en los que he trabajado. Para cada proyecto, proporcionaré una breve descripción del problema y el enfoque de la solución, junto con un resumen de las herramientas utilizadas para implementar la solución.<br>  
@@ -15,10 +17,17 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadshe
    
 - [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en)
  
-    
-  
 <a name="Proyecto2"></a>
-## 2. Análisis de Rotación de Personal (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+## 2. [Limpieza de datos - E-Learning Cursos Online ](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
+<p align="justify">
+LearnData es una empresa de e-learning que vende cursos online de análisis de datos. Su principal problema de negocio es la falta de un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras, lo que dificulta la identificación de áreas de mejora y la toma de decisiones informadas. Además, los datos en crudo generados por la web del negocio pueden estar incompletos, ser inexactos o contener duplicados, lo que complica aún más el análisis y la toma de decisiones. El objetivo de LearnData es realizar una limpieza de datos y desarrollar un sistema para capturar y analizar estos datos de manera eficiente y efectiva, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada en cuanto a la gestión de clientes y ventas. Para ello, utiliza herramientas como WooCommerce, WordPress y Stripe para gestionar su negocio.<br>
+Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL (CTE's, Subquery, Windows functions</strong><br>  
+   
+- [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en)
+
+  
+<a name="Proyectoz"></a>
+## z. Análisis de Rotación de Personal (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 Lenguaje y herramientas utilizadas en el proyecto: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
  
   
