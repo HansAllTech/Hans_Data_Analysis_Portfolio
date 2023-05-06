@@ -11,7 +11,7 @@
 - [Business Problem](#Problema)
 - [Objective](#Objetivo2)  
 - [Client](#Cliente2)
-- Diagram](#Diagrama2)
+- [Diagram](#Diagrama2)
 - [Preliminary Analysis](#Análisis-Previo2)
 - [Execution](#Ejecución2)   
 - [Conclusions](#Conclusiones2) 
@@ -40,12 +40,12 @@ Uses the following tools to manage their business:
 
  |<img src="https://user-images.githubusercontent.com/116538899/236007188-b5128f0e-6b47-4a4e-9460-83e86b808f16.png"> |<p align="center"><img src="https://user-images.githubusercontent.com/116538899/236010475-907ed43b-509f-49a3-8bb4-d0d0642afcba.png" width ='40%'></p> | <img src="https://user-images.githubusercontent.com/116538899/236007568-44196c1a-938c-4216-9e6d-94e6be903f7b.png"> |
 | :------------------------------------------------| :-------------------------------------------------| :------------------------------------------------ |
-| Wocommerce: Es un plugin de wordpress que te permite convertir tu web a un sitio de ecommerce y vender productos.   | Wordpress: Es un sistema de gestión de contenidos(CMS), un software utilizado para construir, modificar y mantener sitios web. Se trata del CMS más popular del mercado, ya que lo utilizan el 65,2% de los sitios web cuyo CMS conocemos. Esto se traduce en el 42,4% de todos los sitios web, casi la mitad de Internet. | Stripe: Es una plataforma de procesamiento de pagos por internet, al igual que paypal.  |
+| Wocommerce: It is a WordPress plugin that allows you to turn your website into an e-commerce site and sell products.   | Wordpress: It is a content management system (CMS), a software used to build, modify and maintain websites. It is the most popular CMS on the market, used by 65.2% of the websites whose CMS we know. This translates into 42.4% of all websites, almost half of the Internet. | Stripe: It is an online payment processing platform, just like PayPal. |
 
 
 
 <a name="Diagrama2"></a>
-## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Diagram [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/235769297-9446a0b7-0ce3-47b4-b7dd-0b3eac8e6c61.png" width= 60% height=60%>
 </p>    
