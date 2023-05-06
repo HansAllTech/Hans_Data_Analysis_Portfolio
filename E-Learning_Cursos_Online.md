@@ -13,7 +13,8 @@
 - [Diagrama](#Diagrama2)
 - [Análisis Previo](#Análisis-Previo2)
 - [Ejecución](#Ejecución2)   
-
+- [Conclusiones](#Conclusiones2) 
+- [Recomendaciones](#Recomendaciones2) 
 
 <a name="Problema"></a>    
 ## Problema de negocio [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
@@ -347,4 +348,24 @@ FROM learndata_crudo.raw_pagos_stripe;
   
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/236006162-97a54338-2448-4c08-aada-3a6323af2bb8.png">
-</p>  
+</p>
+  
+<a name="Conclusiones2"></a>
+## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+<p align="justify">  
+1. Dentro del análisis se puede observar que existen distintos tipos de SKU para un mismo tipo de producto, que en este caso es el curso de Power BI. Esto podría deberse a una mala extracción de información de la fuente de origen.
+<br><br>
+2. Se puede apreciar que existen diferentes tipos de métodos de pago y se está brindando información adicional e innecesaria acerca de las tarjetas, lo cual puede representar un riesgo para la protección de los datos de los usuarios.
+<br><br>
+3. Se pudo observar que existe un duplicado en el número de pedido 41624, lo cual es un error inaceptable ya que podría ser considerado como una venta fraudulenta.
+</p>
+  
+<a name="Recomendaciones2"></a>
+## Recomendaciones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+<p align="justify"> 
+1.  Se recomienda conversar con el equipo de levantamiento de información para determinar la incorrecta extracción de la fuente de origen en relación a la variación de los SKU para un mismo curso de Power BI, y así encontrar una solución adecuada.
+<br><br>  
+2. Se recomienda filtrar todos los medios de pago con el fin de obtener únicamente los resultados de pago con tarjeta y en efectivo, con el objetivo de agilizar el análisis y salvaguardar la protección de los datos de los clientes. 
+<br><br> 
+3. Se debe informar al equipo encargado de la extracción de datos y al área de finanzas sobre la existencia de dos pedidos con el mismo número (41624). Es necesario determinar si se trata de un error en el proceso de venta o si se trata de una posible venta fraudulenta. Por lo tanto, se debe proceder con precaución y se recomienda llevar a cabo una investigación detallada para resolver este problema y evitar futuras inconsistencias.
+</p>
