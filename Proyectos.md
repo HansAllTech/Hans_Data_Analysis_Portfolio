@@ -24,7 +24,7 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadshe
 LearnData es una empresa de e-learning que vende cursos online de análisis de datos. Su principal problema de negocio es la falta de un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras, lo que dificulta la identificación de áreas de mejora y la toma de decisiones informadas. Además, los datos en crudo generados por la web del negocio pueden estar incompletos, ser inexactos o contener duplicados, lo que complica aún más el análisis y la toma de decisiones.
 <br>
 El objetivo de LearnData es realizar una limpieza de datos y desarrollar un sistema para capturar y analizar estos datos de manera eficiente y efectiva, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada en cuanto a la gestión de clientes y ventas. Para ello, utiliza herramientas como WooCommerce, WordPress y Stripe para gestionar su negocio.<br>
-Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL (CTE's, Subquery, Windows functions</strong><br>  
+Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL (CTE's, Subquery, Windows functions)</strong><br>  
 </p>
 
 - [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en)
