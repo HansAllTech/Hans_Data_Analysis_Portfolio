@@ -13,16 +13,20 @@ Al proporcionar información sobre tecnología utilizada en cada proyecto, esper
 <a name="Proyecto1"></a>
 ## 1. [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">La empresa de ecommerce online "Osito Feliz" necesita mejorar sus ventas e impacto en el mercado, a pesar de contar con 4 modelos de peluches atractivos. Para solucionar este problema, se llevará a cabo un análisis de datos para medir la conversión de la web y entender las ventas e impacto de los productos, identificando áreas de mejora y oportunidades de crecimiento. El objetivo es proporcionar información detallada y recomendaciones para mejorar su posicionamiento en el mercado y alcanzar los objetivos de crecimiento y rentabilidad, trabajando en colaboración con el CEO, el director de marketing y el Gerente de la web.<br>
-Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>  
+Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL ,Spreadsheet, Looker Studio</strong><br>
+</p>
    
 - [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Osito_feliz_ecommerce.md#an%C3%A1lisis-financiero--tr%C3%A1fico-web---ecommerce-osito-feliz--es--en)
  
 <a name="Proyecto2"></a>
 ## 2. [Limpieza de datos - E-Learning Cursos Online ](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido)
 <p align="justify">
-LearnData es una empresa de e-learning que vende cursos online de análisis de datos. Su principal problema de negocio es la falta de un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras, lo que dificulta la identificación de áreas de mejora y la toma de decisiones informadas. Además, los datos en crudo generados por la web del negocio pueden estar incompletos, ser inexactos o contener duplicados, lo que complica aún más el análisis y la toma de decisiones. El objetivo de LearnData es realizar una limpieza de datos y desarrollar un sistema para capturar y analizar estos datos de manera eficiente y efectiva, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada en cuanto a la gestión de clientes y ventas. Para ello, utiliza herramientas como WooCommerce, WordPress y Stripe para gestionar su negocio.<br>
+LearnData es una empresa de e-learning que vende cursos online de análisis de datos. Su principal problema de negocio es la falta de un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras, lo que dificulta la identificación de áreas de mejora y la toma de decisiones informadas. Además, los datos en crudo generados por la web del negocio pueden estar incompletos, ser inexactos o contener duplicados, lo que complica aún más el análisis y la toma de decisiones.
+<br>
+El objetivo de LearnData es realizar una limpieza de datos y desarrollar un sistema para capturar y analizar estos datos de manera eficiente y efectiva, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada en cuanto a la gestión de clientes y ventas. Para ello, utiliza herramientas como WooCommerce, WordPress y Stripe para gestionar su negocio.<br>
 Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL (CTE's, Subquery, Windows functions</strong><br>  
-   
+</p>
+
 - [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en)
 
   
