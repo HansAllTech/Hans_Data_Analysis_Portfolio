@@ -364,7 +364,7 @@ FROM learndata_crudo.raw_pagos_stripe;
 </p>
   
 <a name="Recomendaciones2"></a>
-## Recomendations[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Recommendations[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify"> 
 1. It is recommended to discuss with the information gathering team to determine the incorrect extraction of the source of origin regarding the variation of SKUs for the same Power BI course, and thus find an appropriate solution.
 <br><br>  
