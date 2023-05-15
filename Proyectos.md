@@ -36,4 +36,4 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL (CTE's, Su
 Lenguaje y herramientas utilizadas en el proyecto: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
  
   
- 
+  
