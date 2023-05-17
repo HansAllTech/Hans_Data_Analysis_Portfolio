@@ -35,6 +35,6 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL (CTE's, Su
 ## z. Análisis de Rotación de Personal (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Lenguaje y herramientas utilizadas en el proyecto: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
  
-   
+    
   
  
