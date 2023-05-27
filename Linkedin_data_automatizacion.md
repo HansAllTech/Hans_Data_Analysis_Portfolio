@@ -1,5 +1,5 @@
 <a name="Inicio"></a>    
-# Limpieza de datos - E-Learning Cursos Online [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Online_Courses.md#data-cleaning---e-learning-online-courses--es--en))
+# Automatización, Limpieza y Análisis - Linkedin Data [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Online_Courses.md#data-cleaning---e-learning-online-courses--es--en))
   
 <p align = 'center'><img src="https://user-images.githubusercontent.com/116538899/235765262-8acfe1d1-a637-4ef7-adeb-b1880368c671.jpg" width ="25%"></p>
   
@@ -23,13 +23,17 @@ En nuestro negocio, nos enfrentamos al desafío de extraer conclusiones signific
  </p> 
 Este problema empresarial implica los siguientes pasos clave:  
 
-<blockquote class="tabulacion"><p align='justify'>1. Validación de datos: Implementar un proceso riguroso de validación para asegurarnos de que los datos obtenidos a través del webscraping sean correctos y estén libres de errores.</p></blockquote>
+<blockquote class="tabulacion">
+<p align='justify'>1. Validación de datos: Implementar un proceso riguroso de validación para asegurarnos de que los datos obtenidos a través del webscraping sean correctos y estén libres de errores.</p>  
+<p align='justify'>2. Análisis de mercado laboral: Realizar un análisis exhaustivo de los datos validados para identificar tendencias, patrones y oportunidades en el mercado laboral relacionado con los datos.</p>
+<p align='justify'>3. Conclusiones y recomendaciones: Extraer conclusiones significativas basadas en el análisis realizado y utilizarlas para tomar decisiones estratégicas, identificar áreas de mejora o desarrollar estrategias de contratación efectivas.
+Al abordar este problema de negocio, esperamos obtener una comprensión profunda y precisa del mercado laboral en el mundo de los datos, lo que nos permitirá tomar decisiones informadas y estratégicas para el crecimiento y éxito de nuestra organización.</p>
+</blockquote>
 
 <br>
 2. Análisis de mercado laboral: Realizar un análisis exhaustivo de los datos validados para identificar tendencias, patrones y oportunidades en el mercado laboral relacionado con los datos.
 <br>
-3. Conclusiones y recomendaciones: Extraer conclusiones significativas basadas en el análisis realizado y utilizarlas para tomar decisiones estratégicas, identificar áreas de mejora o desarrollar estrategias de contratación efectivas.
-Al abordar este problema de negocio, esperamos obtener una comprensión profunda y precisa del mercado laboral en el mundo de los datos, lo que nos permitirá tomar decisiones informadas y estratégicas para el crecimiento y éxito de nuestra organización.
+
 </p>  
   
 <a name="Objetivo2"></a>
