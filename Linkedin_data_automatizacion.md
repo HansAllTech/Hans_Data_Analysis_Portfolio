@@ -2,9 +2,6 @@
 # Automatización, Limpieza y Análisis - Linkedin Data [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Online_Courses.md#data-cleaning---e-learning-online-courses--es--en))
   
 <p align = 'center'><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241485467-97a1c50d-1fe4-49d0-a83f-b7b3f8bc7b2c.png" width ="25%"></p>
-
-
-
   
 <a name="Tabla-de-contenido2"></a>
 ## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
@@ -64,114 +61,152 @@ El primer paso es limpiar los datos y crear nuevas tablas con los datos limpios.
 1. ¿Que tipo de datos tenemos?  
 2. ¿Que limpieza observamos que podríamos hacer?   
 3. ¿Como validamos datos?  
-
-**Analizando tablas en crudo**  
-
-- _Tabla raw_productos_wocommerce_
-   
-```sql
-SELECT * FROM learndata_crudo.raw_productos_wocommerce;
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235800904-2d0afb4d-8c31-4586-9ecf-fe50f5564ba2.png">
-</p>  
-
-- _Tabla raw_clientes_wocommerce_
-   
-```sql
-SELECT * FROM learndata_crudo.raw_clientes_wocommerce;	
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235801625-babcec77-b88a-48b0-9a05-5fb1407a2b2e.png">
-</p>  
-
-- _Tabla raw_clientes_wocommerce_
-   
-```sql
-SELECT * FROM learndata_crudo.raw_pagos_stripe;	
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235801722-45eceaad-da39-4341-b013-dd0ae6fe5793.png">
-</p>   
-
-- _Tabla raw_pedidos_wocommerce_
-   
-```sql
-SELECT * FROM learndata_crudo.raw_pedidos_wocommerce;;	
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235801953-7c78dfa1-5b5e-4e44-a406-f1bc255a0105.png">
-</p>    
-
-
+  
 <a name="Ejecución2"></a>    
 ## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-1. Crear una nueva base de datos en MYSQL llamada “learndata” + tablas:
-    1. dim_clientes; dim_producto;fac_pedidos; fac_pagos_stripe
+### Parte I - Crear tabla linkedin_data + SP de recarga de datos  
+1. Cargar la base de datos  “linkedin_data”  
+
+2. Crear tabla linkedin_ofertas 
+```sql
+CREATE TABLE linkedin_data.linkedin_ofertas (
+id_oferta INT PRIMARY KEY,
+fecha_actualizacion DATETIME,
+nombre_empresa VARCHAR (200),
+fecha_busqueda_oferta_linkedin DATETIME,
+fecha_publicacion_oferta DATE,
+ubicacion_oferta VARCHAR(200),
+search_id_oferta INT,
+titulo_oferta VARCHAR (200),
+fecha_actualizacion_sp DATETIME
+)
+```  
+
+3. Modificar las restricciones de la fecha ejecutuando la siguiente sentencia:   
+```sql
+SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';)
+``` 
+   
+4. Definir la consulta que va a dejar los datos como queremos. (limpiarlos)  
+```sql
+INSERT INTO linkedin_data.linkedin_ofertas
+SELECT 
+id AS id_oferta,
+_fivetran_synced AS fecha_actualizacion,
+company_name AS nombre_empresa,
+STR_TO_DATE(date, '%Y-%m-%d %H:%i:%s') AS fecha_busqueda_oferta_linkedin,
+date_published AS fecha_publicacion_oferta,
+location AS ubicacion_oferta,
+searches AS search_id_oferta,
+title AS titulo_oferta,
+NOW() fecha_actualizacion_sp
+FROM linkedin_data.raw_linkedin_results
+WHERE True
+# AND _fivetran_synced is not null 
+AND fecha_actualizacion > DATE_SUB(CURDATE(),INTERVAL 1 DAY) #opcion 1
+AND id NOT IN (SELECT id_oferta FROM linkedin_data.linkedin_ofertas); #opcion 2
+```   
+
+5. Crear un stored procedure con la query de limpieza que inserte datos en la tabla.
+```sql
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_table_linkedin_ofertas`()
+BEGIN
+INSERT INTO linkedin_data.linkedin_ofertas
+SELECT 
+id AS id_oferta,
+_fivetran_synced AS fecha_actualizacion,
+company_name AS nombre_empresa,
+STR_TO_DATE(date, '%Y-%m-%d %H:%i:%s') AS fecha_busqueda_oferta_linkedin,
+date_published AS fecha_publicacion_oferta,
+location AS ubicacion_oferta,
+searches AS search_id_oferta,
+title AS titulo_oferta,
+NOW() fecha_actualizacion_sp
+FROM linkedin_data.raw_linkedin_results
+WHERE True
+# AND _fivetran_synced is not null 
+AND fecha_actualizacion > DATE_SUB(CURDATE(),INTERVAL 1 DAY) #opcion 1
+AND id NOT IN (SELECT id_oferta FROM linkedin_data.linkedin_ofertas); #opcion 2
+END$$
+DELIMITER ;
+```  
+
+6. Crear el evento que ejecute el SP de forma diaria   
 
 ```sql
-# Creación de base de datos
-CREATE SCHEMA learndata;
-
-# Creación de Tabla dim_clientes
-CREATE TABLE dim_clientes (
-    id_cliente INT,
-    fecha_creacion_cliente DATE,
-    nombre_cliente VARCHAR(100),
-    apellido_cliente VARCHAR(100),
-    email_cliente VARCHAR(100),
-    telefono_cliente VARCHAR(100),
-    region_cliente VARCHAR(100),
-    pais_cliente VARCHAR(100),
-    codigo_postal_cliente VARCHAR(100),
-    direccion_cliente VARCHAR(255),
-    PRIMARY KEY (id_cliente)
-    );
+CREATE 
+EVENT `update_table_linkedin_ofertas`
+ON SCHEDULE EVERY 1 DAY
+STARTS TIMESTAMP(NOW() + INTERVAL 1 MINUTE)
+DO CALL update_table_linkedin_ofertas();
+```   
     
-# Creación de Tabla dim_product
-CREATE TABLE dim_producto (
-    id_producto INT,
-    sku_producto INT,
-    nombre_producto VARCHAR(200),
-    publicado_producto BOOLEAN,
-    inventario_producto VARCHAR(100),
-    precio_normal_producto INT,
-    categoria_producto VARCHAR(100),
-    PRIMARY KEY (sku_producto)
-    );
+### Parte II - Crear tabla linkedin_busquedas + SP de recarga de datos     
 
-# Creación de Tabla fac_pedidos
-CREATE TABLE fac_pedidos (
-    id_pedido INT,
-    sku_producto INT,
-    estado_pedido VARCHAR(50),
-    fecha_pedido DATE,
-    id_cliente INT,
-    tipo_pago_pedido VARCHAR(50),
-    coto_pedido INT,
-    importe_de_descuento_pedido DECIMAL(10,0),
-    importe_total_pedido INT,
-    cantidad_pedido INT,
-    codigo_cupon_pedido VARCHAR(100),
-    PRIMARY KEY (id_pedido),
-    FOREIGN KEY (id_cliente) REFERENCES dim_clientes (id_cliente),
-    FOREIGN KEY (sku_producto) REFERENCES dim_producto (sku_producto)
-    );
-    
-# Creación de Tabla fac_pagos_stripe
-CREATE TABLE fac_pagos_stripe (
-    id_pago INT,
-    fecha_pago DATETIME(6),
-    id_pedido INT,
-    importe_pago INT,
-    moneda_pago VARCHAR(5),
-    comision_pago DECIMAL(10,2),
-    neto_pago DECIMAL(10,2),
-    tipo_pago VARCHAR(50),
-    PRIMARY KEY (id_pago),
-    FOREIGN KEY (id_pedido) REFERENCES fac_pedidos (id_pedido)
-    ) 
-```
+1. Crear tabla linkedin_busquedas  
+
+```sql   
+CREATE TABLE linkedin_busquedas (
+	id_busqueda INT PRIMARY KEY,
+    fecha_busqueda DATETIME,
+    fecha_actualizacion DATETIME,
+    keyword_busqueda VARCHAR(200),
+    pais_busqueda VARCHAR(200),
+    n_resultados_busqueda INT,
+    fecha_actualizacion_sp DATETIME
+)
+```   
+
+2. Modificar las restricciones de la fecha ejecutuando la siguiente sentencia   
+
+```sql
+SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';)
+```   
+
+3. Definir la consulta que va a dejar los datos como queremos. (limpiarlos)
+```sql
+SELECT    
+	id as id_busqueda,
+	timestamp(STR_TO_DATE(date,"%Y-%m-%d %H:%i:%s")) AS fecha_busqueda_1, -- posible solucion
+	DATE_FORMAT(STR_TO_DATE(date,"%Y-%m-%d %H:%i:%s"),'%Y-%m-%d %H:%i:%s') AS fecha_busqueda,
+	DATE_FORMAT(STR_TO_DATE(_fivetran_synced,"%Y-%m-%d %H:%i:%s"),'%Y-%m-%d %H:%i:%s') AS fecha_actualizacion,   
+	keyword as keyword_busqueda,   location AS pais_busqueda, 
+    cast(REPLACE(REPLACE(n_results,",",""),"+","") as UNSIGNED) AS n_resultados_busqueda,
+    NOW() AS fecha_actualizacion_sp
+	FROM linkedin_data.raw_linkedin_searches;
+```  
+
+4. Crear un stored procedure con la query de limpieza que inserte datos en la tabla.
+```sql
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_table_linkedin_busquedas`()
+BEGIN
+
+SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
+INSERT INTO linkedin_data.linkedin_busquedas
+SELECT
+	id as id_busqueda,
+	-- timestamp(STR_TO_DATE(date,"%Y-%m-%d %H:%i:%s")) AS fecha_busqueda_1, -- posible solucion
+	DATE_FORMAT(STR_TO_DATE(date,"%Y-%m-%d %H:%i:%s"),'%Y-%m-%d %H:%i:%s') AS fecha_busqueda,
+	DATE_FORMAT(STR_TO_DATE(_fivetran_synced,"%Y-%m-%d %H:%i:%s"),'%Y-%m-%d %H:%i:%s') AS fecha_actualizacion,   
+	keyword AS keyword_busqueda,   location AS pais_busqueda, 
+    cast(REPLACE(REPLACE(n_results,",",""),"+","") as UNSIGNED) AS n_resultados_busqueda,
+    NOW() AS fecha_actualizacion_sp
+	FROM linkedin_data.raw_linkedin_searches;
+END$$
+DELIMITER ;
+```  
+
+5. Crear el evento que ejecute el SP de forma diaria
+```sql
+CREATE 
+EVENT `update_table_linkedin_busquedas`
+ON SCHEDULE EVERY 1 DAY
+STARTS TIMESTAMP(NOW() + INTERVAL 1 MINUTE)
+DO CALL update_table_linkedin_busquedas();
+```  
+
 **Nuevo Diagrama**  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%>
