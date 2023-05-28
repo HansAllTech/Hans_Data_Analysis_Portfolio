@@ -12,6 +12,7 @@
 - [Objetivo](#Objetivo2)  
 - [Cliente](#Cliente2)
 - [Diagrama](#Diagrama2)
+- [La Solución](#La-solucion2)
 - [Análisis Previo](#Análisis-Previo2)
 - [Ejecución](#Ejecución2)   
 - [Conclusiones](#Conclusiones2) 
@@ -54,18 +55,15 @@ Somos analistas de datos y queremos analizar el mercado laboral en éstos roles.
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241489016-25e9235c-e528-4c41-ba2c-83e7e5b06844.png" width= 60% height=60%>
 </p>    
 
- 
+<a name="La-solucion2"></a>
+## La solución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+El primer paso es limpiar los datos y crear nuevas tablas con los datos limpios. El segundo paso será automatizar esa limpieza con un SP que se ejecute de forma diaria y nos actualice la información en la nueva tabla.   
+
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-1. ¿Que fuentes de datos tiene la empresa?
-   <p align='justify'>La empresa utiliza wordpress con un plugin de wocommerce como plataforma de venta de sus cursos online y luego cuenta con stripe como pasarela de pagos a de más de los pagos de tarjeta de crédito.</p>
-2. ¿En que formato se descargan los datos?    
-   <p align='justify'> Los datos crudos los tendremos en csv directamente descargados de las fuentes.</p>
-3. ¿Que datos tenemos?    
-   <p align='justify'>Tenemos datos de los productos osea cursos que se venden, los clientes, de los pedidos y de los pagos recibidos por stripe.</p>
-4. Modelo de datos    
-   <p align='justify'>Tenemos la tabla de pedidos que se relaciona con la de clientes y productos mediante SKU_producto e id_cliente y por otro lado tenemos la tabla      la de pagos de stripe que la relacionaremos con la de pedidos por el numero de pedido.</p><br>   
-5. Análisis exploratorio de las tablas.  
+1. ¿Que tipo de datos tenemos?  
+2. ¿Que limpieza observamos que podríamos hacer?   
+3. ¿Como validamos datos?  
 
 **Analizando tablas en crudo**  
 
