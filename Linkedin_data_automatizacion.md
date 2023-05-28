@@ -212,7 +212,8 @@ DO CALL update_table_linkedin_busquedas();
 <img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%>
 </p>    
 
- 
+### Parte III - Análisis de los datos de las tabla  
+
 2. Crear la tabla de productos a partir de los datos en crudo.
     1. Chequear como vienen los datos
     2. Cambiar los nombres de los campos
