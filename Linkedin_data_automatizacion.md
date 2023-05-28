@@ -387,7 +387,9 @@ FROM learndata_crudo.raw_pagos_stripe;
 <p align="center">
 <img src="https://user-images.githubusercontent.com/116538899/236006162-97a54338-2448-4c08-aada-3a6323af2bb8.png">
 </p>
-  
+ 
+ 
+<!--  
 <a name="Conclusiones2"></a>
 ## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify">  
@@ -407,3 +409,5 @@ FROM learndata_crudo.raw_pagos_stripe;
 <br><br> 
 3. Se debe informar al equipo encargado de la extracción de datos y al área de finanzas sobre la existencia de dos pedidos con el mismo número (41624). Es necesario determinar si se trata de un error en el proceso de venta o si se trata de una posible venta fraudulenta. Por lo tanto, se debe proceder con precaución y se recomienda llevar a cabo una investigación detallada para resolver este problema y evitar futuras inconsistencias.
 </p>
+
+-->
