@@ -1,9 +1,10 @@
 <a name="Inicio"></a>    
 # Automatización, Limpieza y Análisis - Linkedin Data [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2) ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Online_Courses.md#data-cleaning---e-learning-online-courses--es--en))
   
-<p align = 'center'><img src="https://user-images.githubusercontent.com/116538899/235765262-8acfe1d1-a637-4ef7-adeb-b1880368c671.jpg" width ="25%"></p>
-  
-  
+<p align = 'center'><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241485467-97a1c50d-1fe4-49d0-a83f-b7b3f8bc7b2c.png" width ="25%"></p>
+
+
+
   
 <a name="Tabla-de-contenido2"></a>
 ## Tabla de Contenido [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
@@ -30,16 +31,10 @@ Este problema empresarial implica los siguientes pasos clave:
 Al abordar este problema de negocio, esperamos obtener una comprensión profunda y precisa del mercado laboral en el mundo de los datos, lo que nos permitirá tomar decisiones informadas y estratégicas para el crecimiento y éxito de nuestra organización.</p>
 </blockquote>
 
-<br>
-2. Análisis de mercado laboral: Realizar un análisis exhaustivo de los datos validados para identificar tendencias, patrones y oportunidades en el mercado laboral relacionado con los datos.
-<br>
-
-</p>  
-  
 <a name="Objetivo2"></a>
 ## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align='justify'>
-Realizar una limpieza de datos para asegurar que los datos en crudo relacionados con clientes, pagos, pedidos y productos estén completos, sean precisos y no contengan duplicados, lo que permitirá una mayor precisión en el análisis y una toma de decisiones más informada en cuanto a la gestión de clientes y ventas. Además, la empresa debe invertir en el desarrollo e implementación de un sistema que pueda capturar y analizar estos datos de manera eficiente y efectiva para que la empresa pueda tomar decisiones informadas y basadas en datos para mejorar su desempeño en términos de gestión de clientes y ventas.
+El objetivo principal de nuestro proyecto es extraer conclusiones relevantes sobre el mercado laboral en el mundo de los datos. Para lograrlo, contamos con información obtenida a través de una descarga de datos mediante webscraping. Sin embargo, antes de llegar a conclusiones, debemos validar la integridad y precisión de los datos recolectados. Una vez completada la validación, nos enfocaremos en analizar y explorar los datos con el fin de identificar patrones, tendencias y puntos clave del mercado laboral en el ámbito de los datos. Estas conclusiones nos permitirán obtener una comprensión más profunda y precisa de este mercado, y nos ayudarán a tomar decisiones estratégicas y orientadas al crecimiento en este sector en constante evolución.
 </p>  
 
 <a name="Cliente2"></a>
