@@ -207,186 +207,31 @@ STARTS TIMESTAMP(NOW() + INTERVAL 1 MINUTE)
 DO CALL update_table_linkedin_busquedas();
 ```  
 
-**Nuevo Diagrama**  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235796810-2720600f-c6eb-4597-919b-d5baae753d21.png" width= 60% height=60%>
-</p>    
-
 ### Parte III - Análisis de los datos de las tabla  
 
-2. Crear la tabla de productos a partir de los datos en crudo.
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Insertar los campos a la nueva tabla  
-
-**Inserción de valores a tabla dim_producto**     
+1. ¿Cúales son las empresas con mayor cantidad de ofertas?  
 ```sql
-INSERT INTO learndata.dim_producto
-SELECT
-id AS id_producto,
-sku AS sku_producto,
-nombre AS nombre_producto, 
-publicado AS publicado_producto,
-inventario AS inventario_producto,
-precio_normal AS precio_normal_producto,
-categorias AS categoria_producto
-FROM learndata_crudo.raw_productos_wocommerce;
-```  
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235800584-99aaefbe-74fe-4ed8-b4fe-c845153d8236.png">
-</p>    
-
-
-
-3. Crear la tabla de clientes a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Convertir el campo date_created que viene como timestamp a solo fecha
-    4. Extraer del campo billing, todos los descriptivos del cliente que necesitamos aprendiendo a parsear un JSON. 
-    5. Insertar los campos a la nueva tabla   
-
-**Inserción de valores a tabla dim_clientes**     
-```sql
-INSERT INTO learndata.dim_clientes
 SELECT 
-id AS id_cliente,
-STR_TO_DATE(date_created, '%d/%m/%Y %H:%i:%s' ) AS fecha_creacion_cliente,
-JSON_VALUE(billing,'$[0].first_name') AS nombre_cliente, 
-JSON_VALUE(billing,'$[0].last_name') AS apellido_cliente,
-JSON_VALUE(billing,'$[0].email') AS email_cliente,
-JSON_VALUE(billing,'$[0].phone') AS telefono_cliente,
-JSON_VALUE(billing,'$[0].Region') AS region_cliente,
-JSON_VALUE(billing,'$[0].country') AS pais_cliente,
-JSON_VALUE(billing,'$[0].postcode') AS codigo_postal_cliente,
-JSON_VALUE(billing,'$[0].address_1') AS direccion_cliente
-FROM learndata_crudo.raw_clientes_wocommerce;
+nombre_empresa,
+COUNT(*) Cantidad_ofertas
+FROM linkedin_data.linkedin_ofertas
+GROUP BY nombre_empresa
+ORDER BY Cantidad_ofertas DESC;
 ```  
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235809344-4feb0b46-a0cb-4873-b091-9b43d1d6691e.png">
-</p>    
-
-
-4. Crear la tabla de pedidos a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Sustituir el nombre del producto por el id.
-    4. Normalizar la columna método de pago.
-    5. Convertir a date la columna fecha_pedido
-    6. Redondear decimales de la columna coste_articulo a enteros
-    7. Insertamos los pedidos a la tabla
-
-```sql
-# Sku errores
-SELECT
-DISTINCT sku
-FROM learndata_crudo.raw_pedidos_wocommerce;
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235987844-4958b12c-2299-459f-8bdb-02afe4ab2b31.png">
-</p>    
-
-
-```sql
-# Diferentes tipos de pago
-SELECT
-DISTINCT titulo_metodo_de_pago
-FROM learndata_crudo.raw_pedidos_wocommerce;
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235988179-dbeb3595-81c4-4c00-a589-3338ff95632c.png">
-</p>  
-
-
-```sql
-# Error de doble numero de pedido
-SELECT 
-* 
-FROM learndata_crudo.raw_pedidos_wocommerce
-WHERE numero_de_pedido = '41624';
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235988377-614255cb-ed68-4dd7-8933-d3fbd55332f6.png">
-</p>  
-
-
-```sql
-# Eliminamos el duplicado
-DELETE
-FROM learndata_crudo.raw_pedidos_wocommerce
-WHERE numero_de_pedido = '41624' AND `id cliente` = '1324';
-```  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235988887-71d33256-e2ef-4965-ae93-8eb5469f5eb0.png">
-</p>   
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241493688-0c82d3a0-c7cf-455d-9da7-8bbf595f3ceb.png"></p>  
 
 
 
-**Inserción de valores a tabla fac_pedidos**   
-```sql
-INSERT INTO learndata.fac_pedidos
-SELECT
-numero_de_pedido AS id_pedido,
-CASE WHEN dp.sku_producto IS NULL THEN 3 ELSE dp.sku_producto END AS sku_producto,
-estado_de_pedido AS estado_pedido,
-DATE(fecha_de_pedido) AS fecha_pedido,
-`id cliente` AS id_cliente,
-CASE WHEN titulo_metodo_de_pago LIKE '%Stripe%' THEN 'Stripe' ELSE 'Tarjeta' END AS tipo_pago_pedido,
-coste_articulo AS costo_pedido,
-importe_de_descuento_del_carrito AS importe_de_descuento_pedido,
-importe_total_pedido AS importe_total_pedido,
-cantidad AS cantidad_pedido,
-cupon_articulo AS codigo_cupon_pedido
-FROM learndata_crudo.raw_pedidos_wocommerce rpe
-LEFT JOIN learndata.dim_producto dp ON  dp.nombre_producto = rpe.nombre_del_articulo;
-```  
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235835155-f07199cb-75b7-45e3-911b-f075b72c8ca1.png">
-</p>    
+ 
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/235990366-400885b1-03c5-4bcd-9ae8-884a7fe9478e.png">
-</p>  
-
-Nota:  
-```sql  
-# En caso de no poder insertar valores por el formato date, usar la siguiente configuración antes de insert.
-SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
-```  
-
-5. Crear la tabla de cobros de stripe a partir de los datos en crudo
-    1. Chequear como vienen los datos
-    2. Cambiar los nombres de los campos
-    3. Obtener el número de pedido con la función RIGHT. Quitar el numero de pedido de la descripción que es lo que nos va a permitir unir esta tabla con otras
-    4. Pasar a timestamp el campo “created”
-    5. Reemplazar las commas por puntos
-    6. Convertir el número a decimal con dos lugares despues de la comma.
-    7. Insertar tabla en nueva  
-
-**Inserción de valores a tabla fac_pedidos**   
-```sql
-SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';
-INSERT INTO learndata.fac_pagos_stripe (fecha_pago,id_pedido,importe_pago,moneda_pago,comision_pago,neto_pago,tipo_pago)
-SELECT
-TIMESTAMP(created) AS fecha_pago,
-RIGHT(description,5) AS id_pedido,
-amount AS importe_pago,
-currency AS moneda_pago,
-CAST(REPLACE (fee,',','.') AS DECIMAL(10,2)) AS comision_pago,
-CAST(REPLACE (net,',','.') AS DECIMAL (10,2)) AS neto_pago,
-type AS tipo_pago
-FROM learndata_crudo.raw_pagos_stripe;
-```  
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/236005853-7ecbc34b-8cff-463c-bcb6-23e5f04b6d42.png">
-</p>    
-  
-<p align="center">
-<img src="https://user-images.githubusercontent.com/116538899/236006162-97a54338-2448-4c08-aada-3a6323af2bb8.png">
-</p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
 <!--  
