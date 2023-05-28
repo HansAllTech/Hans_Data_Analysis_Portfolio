@@ -39,16 +39,12 @@ El objetivo principal de nuestro proyecto es extraer conclusiones relevantes sob
 
 <a name="Cliente2"></a>
 ## El Cliente[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-[LearnData] es una empresa de e-learning dedicada a la venta de cursos online de análisis de datos. Su principal objetivo es:
-- Comenzar a construir una infraestructura tecnológica para analizar sus datos.   
-- Limpiar los datos para que los puedan consumir las áreas de negocio.  
-
-Utiliza las siguientes herramientas para gestionar su negocio: 
+Somos analistas de datos y queremos analizar el mercado laboral en éstos roles. Para eso estamos obtieniendo datos de los puestos de trabajo que figuran en linkedin en áreas de análisis de datos para distintos países.
 
 
- |<img src="https://user-images.githubusercontent.com/116538899/236007188-b5128f0e-6b47-4a4e-9460-83e86b808f16.png"> |<p align="center"><img src="https://user-images.githubusercontent.com/116538899/236010475-907ed43b-509f-49a3-8bb4-d0d0642afcba.png" width ='40%'></p> | <img src="https://user-images.githubusercontent.com/116538899/236007568-44196c1a-938c-4216-9e6d-94e6be903f7b.png"> |
-| :------------------------------------------------| :-------------------------------------------------| :------------------------------------------------ |
-| Wocommerce: Es un plugin de wordpress que te permite convertir tu web a un sitio de ecommerce y vender productos.   | Wordpress: Es un sistema de gestión de contenidos(CMS), un software utilizado para construir, modificar y mantener sitios web. Se trata del CMS más popular del mercado, ya que lo utilizan el 65,2% de los sitios web cuyo CMS conocemos. Esto se traduce en el 42,4% de todos los sitios web, casi la mitad de Internet. | Stripe: Es una plataforma de procesamiento de pagos por internet, al igual que paypal.  |
+ |<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241487791-af150f5c-3f47-4956-9729-0fd594194731.png"> |<p align="justify">Linkedin: Es una red social profesional donde muchas empresas publican ofertas de trabajo.</p> | 
+| :------------------------------------------------| :-------------------------------------------------| 
+
 
 
 
@@ -58,7 +54,8 @@ Utiliza las siguientes herramientas para gestionar su negocio:
 <img src="https://user-images.githubusercontent.com/116538899/235769297-9446a0b7-0ce3-47b4-b7dd-0b3eac8e6c61.png" width= 60% height=60%>
 </p>    
 
- 
+ ![image](https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241487791-af150f5c-3f47-4956-9729-0fd594194731.png)
+
  
 <a name="Análisis-Previo2"></a>
 ## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
