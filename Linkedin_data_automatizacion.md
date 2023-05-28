@@ -220,11 +220,118 @@ ORDER BY Cantidad_ofertas DESC;
 ```  
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241493688-0c82d3a0-c7cf-455d-9da7-8bbf595f3ceb.png"></p>  
 
+2. ¿Que cantidad de ofertas tenemos en la tabla por ubicación?
+```sql  
+SELECT
+ubicacion_oferta,
+COUNT(search_id_oferta) Cantidad
+FROM linkedin_data.linkedin_ofertas
+GROUP BY ubicacion_oferta
+ORDER BY Cantidad DESC;
+```
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241494955-97be510d-10bc-4489-b86b-610bc57e0136.png"></p>    
+  
+3. ¿Que cantidad de ofertas tenemos por día publicados? 
+```sql  
+SELECT
+fecha_publicacion_oferta, 
+COUNT(search_id_oferta) Cantidad
+FROM linkedin_data.linkedin_ofertas
+GROUP BY fecha_publicacion_oferta
+ORDER BY Cantidad DESC;
+``` 
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495172-0db490b8-47b8-43fb-99fa-2ea4fdca4c52.png"></p>    
 
+4. ¿Cúales son los top 10 títulos de roles que se usan para publicar ofertas?
+```sql  
+SELECT 
+titulo_oferta,
+COUNT(*) Cantidad
+FROM linkedin_data.linkedin_ofertas
+GROUP BY titulo_oferta
+ORDER BY Cantidad DESC
+LIMIT 10;
+``` 
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495301-2be6bd80-ce1d-4a9f-af56-0c189409f49b.png"></p>       
+  
+5. ¿Cúales con las 5 ubicaciones con mayor cantidad de ofertas?
+```sql
+SELECT 
+ubicacion_oferta,
+COUNT(*) Cantidad
+FROM linkedin_data.linkedin_ofertas
+GROUP BY ubicacion_oferta
+ORDER BY Cantidad DESC
+LIMIT 5;
+``` 
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495531-5cc5492f-c67f-4251-b79d-8a88fe843060.png"></p>       
+
+6. ¿Cuantas ofertas de trabajo hay combinando keyowrd con título oferta? ¿Puedes devolver la cantidad agregando por ambos campos?  
+```sql
+SELECT
+b.keyword_busqueda,
+o.titulo_oferta,
+COUNT(*) Cantidad_ofertas
+FROM linkedin_data.linkedin_ofertas o
+LEFT JOIN linkedin_data.linkedin_busquedas b ON o.search_id_oferta = b.id_busqueda
+GROUP BY o.titulo_oferta, b.keyword_busqueda
+ORDER BY Cantidad_ofertas DESC;
+```   
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241496678-0327c59a-21ed-472c-aa9b-7f9c140640d8.png"></p>          
+
+7. ¿Cuantos puestos tenemos como junior, puedes traer la cantidad por título de oferta?
+```sql
+SELECT 
+Titulo_oferta, 
+COUNT(*) Cantidad
+FROM linkedin_data.linkedin_ofertas
+WHERE titulo_oferta REGEXP 'JR|Junior|Intern|Entry'
+GROUP BY titulo_oferta
+ORDER BY Cantidad DESC;
+```   
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241496983-6665bc90-d411-46c5-bfec-0de42157a5fb.png"></p> 
+ 
+8. ¿Puedes ahora devolver la cantidad de ofertas con el título junior, pero por país?
+```sql
+SELECT
+b.pais_busqueda,
+o.titulo_oferta,
+COUNT(*) Cantidad_ofertas
+FROM linkedin_data.linkedin_ofertas o
+LEFT JOIN linkedin_data.linkedin_busquedas b ON o.search_id_oferta = b.id_busqueda
+WHERE titulo_oferta REGEXP 'JR|Junior|Intern|Entry'
+GROUP BY b.pais_busqueda
+ORDER BY Cantidad_ofertas DESC;
+```
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241497368-3a6ee363-9dc5-4127-b390-23948202c866.png"></p>  
+
+9. Podemos saber la cantidad de ofertas publicadas por mes y keyword? ¿Que meses son mas top y con. que keywords?
+```sql
+SELECT
+b.keyword_busqueda,
+MONTH(o.fecha_publicacion_oferta) Mes,
+COUNT(*) Cantidad_ofertas
+FROM linkedin_data.linkedin_ofertas o
+LEFT JOIN linkedin_data.linkedin_busquedas b ON o.search_id_oferta = b.id_busqueda
+GROUP BY b.keyword_busqueda, Mes 
+ORDER BY Mes ASC, Cantidad_ofertas DESC;
+```   
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241497545-d5c2a807-ac65-4f81-8df0-893fbdcb68c2.png"></p>  
 
 
  
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
