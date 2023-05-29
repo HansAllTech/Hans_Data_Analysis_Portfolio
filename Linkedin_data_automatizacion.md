@@ -321,48 +321,24 @@ ORDER BY Mes ASC, Cantidad_ofertas DESC;
 ```   
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241497545-d5c2a807-ac65-4f81-8df0-893fbdcb68c2.png"></p>  
 
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-<!--  
 <a name="Conclusiones2"></a>
 ## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify">  
-1. Dentro del análisis se puede observar que existen distintos tipos de SKU para un mismo tipo de producto, que en este caso es el curso de Power BI. Esto podría deberse a una mala extracción de información de la fuente de origen.
+1. En el desarrollo de sistemas y aplicaciones, es necesario verificar los eventos programados para determinar su habilitación y evitar superposiciones. Esta verificación asegura que los stored procedures se ejecuten sin inconvenientes, evitando conflictos de programación y garantizando que los eventos estén configurados correctamente para su correcta ejecución.
 <br><br>
-2. Se puede apreciar que existen diferentes tipos de métodos de pago y se está brindando información adicional e innecesaria acerca de las tarjetas, lo cual puede representar un riesgo para la protección de los datos de los usuarios.
+2. El top 3 de palabras clave más utilizadas en el campo del análisis de datos y el rol de analista de negocios son: "business intelligence", "análisis de datos" y "business analyst". Estas palabras clave reflejan la importancia de recopilar, analizar y utilizar datos para tomar decisiones informadas. El análisis de datos implica explorar conjuntos de datos para identificar patrones y tendencias, mientras que el business analyst es responsable del análisis de negocios y la toma de decisiones basadas en datos. Estas palabras clave son indicativas de la creciente demanda de inteligencia de negocios y análisis de datos.
 <br><br>
-3. Se pudo observar que existe un duplicado en el número de pedido 41624, lo cual es un error inaceptable ya que podría ser considerado como una venta fraudulenta.
+3. En el mercado laboral actual, se observa una notable disponibilidad de oportunidades laborales para puestos de nivel junior en los países de México y España. Con un total de 73 ofertas en México y 61 ofertas en España, estas cifras reflejan una demanda activa por parte de las empresas en busca de profesionales jóvenes y talentosos que puedan iniciar sus carreras y adquirir experiencia en diversos sectores. Esta tendencia muestra una apertura hacia la inserción de nuevos talentos en el mercado laboral, lo cual representa una oportunidad interesante para aquellos que están en busca de su primer empleo o desean dar un impulso inicial a sus trayectorias profesionales.
 </p>
   
 <a name="Recomendaciones2"></a>
 ## Recomendaciones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify"> 
-1.  Se recomienda conversar con el equipo de levantamiento de información para determinar la incorrecta extracción de la fuente de origen en relación a la variación de los SKU para un mismo curso de Power BI, y así encontrar una solución adecuada.
+1.  Para verificar los eventos programados y asegurarse de que los stored procedures se ejecuten sin inconvenientes, se recomienda utilizar el código SHOW EVENTS para verificar todos los eventos. También se puede utilizar ALTER EVENT en caso de que se desee habilitar o deshabilitar un evento específico. Por último, si se desea eliminar un evento, se puede utilizar DROP EVENT.
 <br><br>  
-2. Se recomienda filtrar todos los medios de pago con el fin de obtener únicamente los resultados de pago con tarjeta y en efectivo, con el objetivo de agilizar el análisis y salvaguardar la protección de los datos de los clientes. 
+2. Con base en los resultados obtenidos, se recomienda profundizar en el análisis de las palabras clave identificadas: "business intelligence", "análisis de datos" y "business analyst". Es importante explorar las tendencias asociadas a estas palabras clave, así como las oportunidades y desafíos que surgen en el campo del análisis de datos y el rol del analista de negocios. Esto permitirá entender cómo estas tendencias impactan en la industria y en las habilidades requeridas por los profesionales. 
 <br><br> 
-3. Se debe informar al equipo encargado de la extracción de datos y al área de finanzas sobre la existencia de dos pedidos con el mismo número (41624). Es necesario determinar si se trata de un error en el proceso de venta o si se trata de una posible venta fraudulenta. Por lo tanto, se debe proceder con precaución y se recomienda llevar a cabo una investigación detallada para resolver este problema y evitar futuras inconsistencias.
+3. Con base en los datos obtenidos, se recomienda a los profesionales jóvenes y en busca de oportunidades laborales considerar activamente las ofertas disponibles en el mercado de México y España. Esta tendencia favorable de un alto número de ofertas para puestos de nivel junior indica que hay una demanda activa por parte de las empresas en la contratación de talento joven y en crecimiento. Se sugiere aprovechar esta situación para postularse a estas vacantes y aprovechar la oportunidad de adquirir experiencia en diversos sectores.
 </p>
 
--->
+
