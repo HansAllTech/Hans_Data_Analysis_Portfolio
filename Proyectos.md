@@ -1,4 +1,4 @@
-<a name="Tabla-de-contenido2"></a>
+<a name="Tabla-de-contenidoz"></a>
 ## Tabla de Contenido ([ES](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Proyectos.md#tabla-de-contenido-es--en) | [EN](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Projects.md#table-of-content-es--en))
 - [Proyectos](#Proyectos)
   + [Análisis Financiero & Tráfico Web - Ecommerce Osito Feliz](#Proyecto1)
@@ -32,7 +32,7 @@ Lenguaje y herramientas utilizadas en el proyecto: <strong>SQL, MySQL (CTE's, Su
 - [x] [`Ir al Proyecto`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Cursos_Online.md#limpieza-de-datos---e-learning-cursos-online--es--en)
 
 <a name="Proyecto3"></a>
-## 2. [Automatización, Limpieza y Análisis - Linkedin Data ](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Linkedin_data_automatizacion.md#automatizaci%C3%B3n-limpieza-y-an%C3%A1lisis---linkedin-data--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## 2. [Automatización, Limpieza y Análisis - Linkedin Data ](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Linkedin_data_automatizacion.md#automatizaci%C3%B3n-limpieza-y-an%C3%A1lisis---linkedin-data--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenidoz)
 <p align="justify">
 LearnData es una empresa de e-learning que vende cursos online de análisis de datos. Su principal problema de negocio es la falta de un sistema establecido para capturar, analizar y tomar decisiones basadas en sus principales métricas financieras, lo que dificulta la identificación de áreas de mejora y la toma de decisiones informadas. Además, los datos en crudo generados por la web del negocio pueden estar incompletos, ser inexactos o contener duplicados, lo que complica aún más el análisis y la toma de decisiones.
 <br>
