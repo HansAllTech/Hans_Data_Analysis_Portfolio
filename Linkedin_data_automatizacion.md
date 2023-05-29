@@ -66,6 +66,9 @@ El primer paso es limpiar los datos y crear nuevas tablas con los datos limpios.
 ## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 ### Parte I - Crear tabla linkedin_data + SP de recarga de datos  
 1. Cargar la base de datos  “linkedin_data”  
+```sql
+CREATE DATABASE  IF NOT EXISTS `linkedin_data`
+```   
 
 2. Crear tabla linkedin_ofertas 
 ```sql
