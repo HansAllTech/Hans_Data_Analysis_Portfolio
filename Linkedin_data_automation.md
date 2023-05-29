@@ -28,47 +28,47 @@ This business problem involves the following key steps:
 </blockquote>
 
 <a name="Objetivo2"></a>
-## Objetivo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Objetive [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align='justify'>
-El objetivo principal de nuestro proyecto es extraer conclusiones relevantes sobre el mercado laboral en el mundo de los datos. Para lograrlo, contamos con información obtenida a través de una descarga de datos mediante webscraping. Sin embargo, antes de llegar a conclusiones, debemos validar la integridad y precisión de los datos recolectados. Una vez completada la validación, nos enfocaremos en analizar y explorar los datos con el fin de identificar patrones, tendencias y puntos clave del mercado laboral en el ámbito de los datos. Estas conclusiones nos permitirán obtener una comprensión más profunda y precisa de este mercado, y nos ayudarán a tomar decisiones estratégicas y orientadas al crecimiento en este sector en constante evolución.
+The main objective of our project is to extract relevant conclusions about the job market in the data field. To achieve this, we have obtained information through a data download using web scraping. However, before reaching conclusions, we need to validate the integrity and accuracy of the collected data. Once the validation is complete, we will focus on analyzing and exploring the data to identify patterns, trends, and key insights in the data job market. These conclusions will allow us to gain a deeper and more accurate understanding of this market and help us make strategic and growth-oriented decisions in this constantly evolving sector.
 </p>  
 
 <a name="Cliente2"></a>
-## El Cliente[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-Somos analistas de datos y queremos analizar el mercado laboral en éstos roles. Para eso estamos obtieniendo datos de los puestos de trabajo que figuran en linkedin en áreas de análisis de datos para distintos países.
+## Client[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+We are data analysts and we want to analyze the job market in these roles. To do so, we are gathering data from job postings listed on LinkedIn in the field of data analysis for various countries.
 
 
- |<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241487791-af150f5c-3f47-4956-9729-0fd594194731.png"> |<p align="justify">Linkedin: Es una red social profesional donde muchas empresas publican ofertas de trabajo.</p> | 
+ |<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241487791-af150f5c-3f47-4956-9729-0fd594194731.png"> |<p align="justify">Linkedin: It is a professional social network where many companies post job listings.</p> | 
 | :------------------------------------------------| :-------------------------------------------------| 
 
 
-
-
 <a name="Diagrama2"></a>
-## Diagrama [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+## Diagram [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 <p align="center">
 <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241489016-25e9235c-e528-4c41-ba2c-83e7e5b06844.png" width= 60% height=60%>
 </p>    
 
 <a name="La-solucion2"></a>
-## La solución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-El primer paso es limpiar los datos y crear nuevas tablas con los datos limpios. El segundo paso será automatizar esa limpieza con un SP que se ejecute de forma diaria y nos actualice la información en la nueva tabla.   
+## Solution [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+The first step is to clean the data and create new tables with the clean data. The second step will be to automate that cleaning process with a stored procedure (SP) that runs daily and updates the information in the new table.  
 
 <a name="Análisis-Previo2"></a>
-## Análisis Previo [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
-1. ¿Que tipo de datos tenemos?  
-2. ¿Que limpieza observamos que podríamos hacer?   
-3. ¿Como validamos datos?  
+## Preliminary Analysis [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+
+1. What type of data do we have?
+2. What cleaning do we observe that we could do?
+3. How do we validate data?
+
   
 <a name="Ejecución2"></a>    
-## Ejecución [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
-### Parte I - Crear tabla linkedin_data + SP de recarga de datos  
-1. Cargar la base de datos  “linkedin_data”  
+## Execution [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+### Parte I - Create table "linkedin_data" + Data reload stored procedure (SP)
+1. Load the database. “linkedin_data”  
 ```sql
 CREATE DATABASE  IF NOT EXISTS `linkedin_data`
 ```   
 
-2. Crear tabla linkedin_ofertas 
+2. Create linkedin_ofertas table
 ```sql
 CREATE TABLE linkedin_data.linkedin_ofertas (
 id_oferta INT PRIMARY KEY,
@@ -83,12 +83,12 @@ fecha_actualizacion_sp DATETIME
 )
 ```  
 
-3. Modificar las restricciones de la fecha ejecutuando la siguiente sentencia:   
+3. Modify the date constraints by executing the following statement:  
 ```sql
 SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';)
 ``` 
    
-4. Definir la consulta que va a dejar los datos como queremos. (limpiarlos)  
+4. Define the query that will leave the data as desired. (limpiarlos)  
 ```sql
 INSERT INTO linkedin_data.linkedin_ofertas
 SELECT 
@@ -108,7 +108,7 @@ AND fecha_actualizacion > DATE_SUB(CURDATE(),INTERVAL 1 DAY) #opcion 1
 AND id NOT IN (SELECT id_oferta FROM linkedin_data.linkedin_ofertas); #opcion 2
 ```   
 
-5. Crear un stored procedure con la query de limpieza que inserte datos en la tabla.
+5. Create a stored procedure with the cleaning query that inserts data into the table.
 ```sql
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `update_table_linkedin_ofertas`()
@@ -133,7 +133,7 @@ END$$
 DELIMITER ;
 ```  
 
-6. Crear el evento que ejecute el SP de forma diaria   
+6. Create the event that executes the stored procedure daily.  
 
 ```sql
 CREATE 
@@ -143,9 +143,9 @@ STARTS TIMESTAMP(NOW() + INTERVAL 1 MINUTE)
 DO CALL update_table_linkedin_ofertas();
 ```   
     
-### Parte II - Crear tabla linkedin_busquedas + SP de recarga de datos     
+### Parte II - Create table "linkedin_searches" + Data reload stored procedure (SP)
 
-1. Crear tabla linkedin_busquedas  
+1. Create linkedin_busquedas table 
 
 ```sql   
 CREATE TABLE linkedin_busquedas (
@@ -159,13 +159,13 @@ CREATE TABLE linkedin_busquedas (
 )
 ```   
 
-2. Modificar las restricciones de la fecha ejecutuando la siguiente sentencia   
+2. Modify the date constraints by executing the following statement: 
 
 ```sql
 SET @@SESSION.sql_mode='ALLOW_INVALID_DATES';)
 ```   
 
-3. Definir la consulta que va a dejar los datos como queremos. (limpiarlos)
+3. Define the query that will clean the data and leave it as desired.
 ```sql
 SELECT    
 	id as id_busqueda,
@@ -178,7 +178,7 @@ SELECT
 	FROM linkedin_data.raw_linkedin_searches;
 ```  
 
-4. Crear un stored procedure con la query de limpieza que inserte datos en la tabla.
+4. Create a stored procedure with the cleaning query that inserts data into the table.
 ```sql
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `update_table_linkedin_busquedas`()
@@ -199,7 +199,7 @@ END$$
 DELIMITER ;
 ```  
 
-5. Crear el evento que ejecute el SP de forma diaria
+5. Create the event that executes the stored procedure daily.
 ```sql
 CREATE 
 EVENT `update_table_linkedin_busquedas`
@@ -208,9 +208,9 @@ STARTS TIMESTAMP(NOW() + INTERVAL 1 MINUTE)
 DO CALL update_table_linkedin_busquedas();
 ```  
 
-### Parte III - Análisis de los datos de las tabla  
+### Parte III - Data analysis of the table.
 
-1. ¿Cúales son las empresas con mayor cantidad de ofertas?  
+1. What are the companies with the highest number of job listings?
 ```sql
 SELECT 
 nombre_empresa,
@@ -221,7 +221,7 @@ ORDER BY Cantidad_ofertas DESC;
 ```  
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241493688-0c82d3a0-c7cf-455d-9da7-8bbf595f3ceb.png"></p>  
 
-2. ¿Que cantidad de ofertas tenemos en la tabla por ubicación?
+2. How many job listings do we have in the table per location?
 ```sql  
 SELECT
 ubicacion_oferta,
@@ -232,7 +232,7 @@ ORDER BY Cantidad DESC;
 ```
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241494955-97be510d-10bc-4489-b86b-610bc57e0136.png"></p>    
   
-3. ¿Que cantidad de ofertas tenemos por día publicados? 
+3. How many job listings do we have published per day?
 ```sql  
 SELECT
 fecha_publicacion_oferta, 
@@ -243,7 +243,7 @@ ORDER BY Cantidad DESC;
 ``` 
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495172-0db490b8-47b8-43fb-99fa-2ea4fdca4c52.png"></p>    
 
-4. ¿Cúales son los top 10 títulos de roles que se usan para publicar ofertas?
+4. What are the top 10 job title roles used for job postings?
 ```sql  
 SELECT 
 titulo_oferta,
@@ -255,7 +255,7 @@ LIMIT 10;
 ``` 
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495301-2be6bd80-ce1d-4a9f-af56-0c189409f49b.png"></p>       
   
-5. ¿Cúales con las 5 ubicaciones con mayor cantidad de ofertas?
+5. What are the top 5 locations with the highest number of job listings?
 ```sql
 SELECT 
 ubicacion_oferta,
@@ -267,7 +267,7 @@ LIMIT 5;
 ``` 
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495531-5cc5492f-c67f-4251-b79d-8a88fe843060.png"></p>       
 
-6. ¿Cuantas ofertas de trabajo hay combinando keyword con título oferta? ¿Puedes devolver la cantidad agregando por ambos campos?  
+6. How many job listings are there when combining the keyword with the job title? Can you provide the count by aggregating both fields?
 ```sql
 SELECT
 b.keyword_busqueda,
@@ -280,7 +280,7 @@ ORDER BY Cantidad_ofertas DESC;
 ```   
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241496678-0327c59a-21ed-472c-aa9b-7f9c140640d8.png"></p>          
 
-7. ¿Cuantos puestos tenemos como junior, puedes traer la cantidad por título de oferta?
+7. How many positions do we have labeled as "junior"? Can you retrieve the count by job title?
 ```sql
 SELECT 
 Titulo_oferta, 
@@ -292,7 +292,7 @@ ORDER BY Cantidad DESC;
 ```   
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241792960-652e07bf-134f-4f51-80af-a0383253bc57.png"></p> 
  
-8. ¿Puedes ahora devolver la cantidad de ofertas con el título junior, pero por país?
+8. Can you now provide the count of job listings with the title "junior" by country?
 ```sql
 SELECT
 b.pais_busqueda,
@@ -306,7 +306,7 @@ ORDER BY Cantidad_ofertas DESC;
 ```
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241793152-ec58edf4-c022-482e-89e8-a2107d867772.png"></p>  
 
-9. Podemos saber la cantidad de ofertas publicadas por mes y keyword? ¿Que meses son mas top y con. que keywords?
+9. Can we determine the count of job listings published per month and keyword? Which months are the top ones and with which keywords?
 ```sql
 SELECT
 b.keyword_busqueda,
@@ -320,7 +320,7 @@ ORDER BY Mes ASC, Cantidad_ofertas DESC;
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241497545-d5c2a807-ac65-4f81-8df0-893fbdcb68c2.png"></p>  
 
 <a name="Conclusiones2"></a>
-## Conclusiones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Conclusions[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify">  
 1. En el desarrollo de sistemas y aplicaciones, es necesario verificar los eventos programados para determinar su habilitación y evitar superposiciones. Esta verificación asegura que los stored procedures se ejecuten sin inconvenientes, evitando conflictos de programación y garantizando que los eventos estén configurados correctamente para su correcta ejecución.
 <br><br>
