@@ -292,7 +292,7 @@ WHERE titulo_oferta REGEXP 'JR|Junior|Intern|Entry'
 GROUP BY titulo_oferta
 ORDER BY Cantidad DESC;
 ```   
-<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241496983-6665bc90-d411-46c5-bfec-0de42157a5fb.png"></p> 
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241792960-652e07bf-134f-4f51-80af-a0383253bc57.png"></p> 
  
 8. ¿Puedes ahora devolver la cantidad de ofertas con el título junior, pero por país?
 ```sql
