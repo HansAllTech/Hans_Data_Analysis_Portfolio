@@ -3,6 +3,7 @@
 - [Projects](#Proyectos)
   + [Financial Analysis & Web Traffic - Happy Teddy Ecommerce](#Proyecto1)
   + [Data Cleaning - E-Learning Online Courses](#Proyecto2)
+  + [Automation, Cleaning, and Analysis - Linkedin Data](#Proyecto3)
   + [Employee Turnover Analysis](#Proyectoz)
   
 <a name="Proyectos"></a>
@@ -30,7 +31,17 @@ Language and tools used in the project: <strong>SQL, MySQL (CTE's, Subquery, Win
   
 - [x] [`Go to Project`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/E-Learning_Online_Courses.md#data-cleaning---e-learning-online-courses--es--en)
 
+<a name="Proyecto3"></a>
+## 3. [Automation, Cleaning, and Analysis - Linkedin Data](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Linkedin_data_automation.md#automation-cleaning-and-analysis---linkedin-data--es--en) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
+<p align="justify">The company faces the challenge of obtaining relevant insights about the data job market. To address this challenge, data obtained through web scraping is utilized, but it is crucial to validate the accuracy of this data before usage. The objective is to gain a deep understanding of the data job market by analyzing and exploring the validated data.
+<br>
+The main objective of the company is to analyze and explore the validated data to identify patterns and trends in the data job market. These conclusions will enable strategic decision-making and growth-oriented strategies in a rapidly evolving sector, thus providing a competitive advantage in the data job market.<br>
+Language and tools used in the project: <strong>SQL, MySQL (Web Scraping, Stored procedure, Events)</strong><br>  
+</p>
   
+- [x] [`Go to Project`](https://github.com/HansAllTech/Hans_Data_Analysis_Portfolio/blob/main/Linkedin_data_automation.md#automation-cleaning-and-analysis---linkedin-data--es--en)
+
+
 <a name="Proyectoz"></a>
 ## z. Employee Turnover Analysis (Coming soon) [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)
 Language and tools used in the project: ```Python```, ```Visual Studio Code```, ```Google Collab``` 
