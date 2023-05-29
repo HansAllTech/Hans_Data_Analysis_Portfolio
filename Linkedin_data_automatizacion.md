@@ -306,7 +306,7 @@ WHERE titulo_oferta REGEXP 'JR|Junior|Intern|Entry'
 GROUP BY b.pais_busqueda
 ORDER BY Cantidad_ofertas DESC;
 ```
-<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241497368-3a6ee363-9dc5-4127-b390-23948202c866.png"></p>  
+<p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241793152-ec58edf4-c022-482e-89e8-a2107d867772.png"></p>  
 
 9. Podemos saber la cantidad de ofertas publicadas por mes y keyword? ¿Que meses son mas top y con. que keywords?
 ```sql
