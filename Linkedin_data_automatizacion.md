@@ -269,7 +269,7 @@ LIMIT 5;
 ``` 
 <p align="center"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/116538899/241495531-5cc5492f-c67f-4251-b79d-8a88fe843060.png"></p>       
 
-6. ¿Cuantas ofertas de trabajo hay combinando keyowrd con título oferta? ¿Puedes devolver la cantidad agregando por ambos campos?  
+6. ¿Cuantas ofertas de trabajo hay combinando keyword con título oferta? ¿Puedes devolver la cantidad agregando por ambos campos?  
 ```sql
 SELECT
 b.keyword_busqueda,
