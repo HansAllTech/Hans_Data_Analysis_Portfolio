@@ -330,7 +330,7 @@ ORDER BY Mes ASC, Cantidad_ofertas DESC;
 </p>
   
 <a name="Recomendaciones2"></a>
-## Recomendaciones[![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
+## Recommendations [![Texto](https://user-images.githubusercontent.com/116538899/231064143-c080de13-8be9-4321-8694-e62539263f5a.png)](#Tabla-de-contenido2)  
 <p align="justify"> 
 1.  To check scheduled events and ensure that stored procedures run smoothly, it is recommended to use the code SHOW EVENTS to verify all events. Additionally, ALTER EVENT can be used to enable or disable a specific event if desired. Finally, if you wish to remove an event, you can use DROP EVENT.
 <br><br>  
